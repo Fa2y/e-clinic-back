@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
+    'authentication',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -75,6 +77,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
 }
+
+AUTH_USER_MODEL = "authentication.User"
 
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
