@@ -96,22 +96,7 @@ class Patient(models.Model):
     ]
     education_level = models.CharField(
         max_length=50, choices=LEVELS, default="NONE")
-    is_approaved = models.BooleanField(default=False)
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return f"Patient-{self.type}-{self.user.last_name} {self.user.first_name}"
-
-
-class Doctor(models.Model):
-    '''
-    Doctor role User, inherit from Base User
-    '''
-    user = models.OneToOneField(to=User, on_delete=models.CASCADE)
-    TYPES = [
-        ("Doctor", "Doctor"),
-        ("Nurse", "Nurse")
-    ]
-    type = models.CharField(max_length=50, choices=TYPES, default="Doctor")
-
-    def __str__(self):
-        return f"{self.type}-{self.user.last_name} {self.user.first_name}"
