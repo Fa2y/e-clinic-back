@@ -69,10 +69,16 @@ class Patient(models.Model):
     TYPES = [
         ("ATP", "ATP"),
         ("Student", "Student")
+        ("teacher", "taecher") 
     ]
     type = models.CharField(max_length=50, choices=TYPES, default="Student")
     LEVELS = [
         ("NONE", "NONE"),  # in case of ATP
+        ("MA-A", "MA-A"),  #
+        ("MA-B","MA-B"),   #----
+        ("MC-A", "MC-A"),  # --in case of teacher
+        ("MC-B", "MC-B"),  #---
+        ("Professor", "Professor"), #---
         ("1CPI", "1CPI"),
         ("2CPI", "2CPI"),
         ("1CS", "1CS"),
