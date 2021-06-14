@@ -69,6 +69,8 @@ class Patient(models.Model):
     '''
     Patient role User, inherit from Base User
     '''
+    pid = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(to=User, on_delete=models.CASCADE)
     TYPES = [
         ("ATP", "ATP"),
