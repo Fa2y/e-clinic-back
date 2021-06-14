@@ -13,7 +13,7 @@ class ESISBAEmailValidator(EmailValidator):
     the domain name to include"esi-sba.dz"
     '''
 
-    message = 'Only esi-sba emails are accepted.'
+    message = 'Only esi-sba.dz emails are accepted.'
 
     def validate_domain_part(self, domain_part):
         return False
@@ -32,6 +32,7 @@ class User(AbstractUser):
         ('Male', 'Male'),
         ('Female', 'Female'),
     ]
+    username = models.CharField(null=True, max_length=150)
     sex = models.CharField(max_length=200, choices=GENDER, default='Male')
     ROLES = [
         ('Admin', 'Admin'),
@@ -40,11 +41,11 @@ class User(AbstractUser):
         ('Nurse', 'Nurse'),
         ('Patient', 'Patient')
     ]
-    email = models.EmailField(
-        max_length=60,
-        validators=[ESISBAEmailValidator(
-            allowlist=['esi-sba.dz'])]
-    )
+    email = models.EmailField(unique=True,
+                              max_length=60,
+                              validators=[ESISBAEmailValidator(
+                                  allowlist=['esi-sba.dz'])]
+                              )
     role = models.CharField(max_length=50, choices=ROLES, default="Patient")
     image = models.ImageField(upload_to='userImages', blank=True)
     phone = models.CharField(max_length=200, blank=True)
@@ -53,6 +54,9 @@ class User(AbstractUser):
     address = models.CharField(max_length=200, blank=True)
     is_confirmed = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     class Meta:
         verbose_name_plural = "User"
@@ -68,17 +72,20 @@ class Patient(models.Model):
     user = models.OneToOneField(to=User, on_delete=models.CASCADE)
     TYPES = [
         ("ATP", "ATP"),
-        ("Student", "Student")
-        ("teacher", "taecher") 
+        ("Student", "Student"),
+        ("Teacher", "Teacher")
     ]
     type = models.CharField(max_length=50, choices=TYPES, default="Student")
     LEVELS = [
-        ("NONE", "NONE"),  # in case of ATP
-        ("MA-A", "MA-A"),  #
-        ("MA-B","MA-B"),   #----
-        ("MC-A", "MC-A"),  # --in case of teacher
-        ("MC-B", "MC-B"),  #---
-        ("Professor", "Professor"), #---
+        # in case of ATP
+        ("NONE", "NONE"),
+        # in case of Teacher
+        ("MA-A", "MA-A"),
+        ("MA-B", "MA-B"),
+        ("MC-A", "MC-A"),
+        ("MC-B", "MC-B"),
+        ("Professor", "Professor"),
+        # in case of Student
         ("1CPI", "1CPI"),
         ("2CPI", "2CPI"),
         ("1CS", "1CS"),
@@ -104,7 +111,7 @@ class Doctor(models.Model):
         ("Doctor", "Doctor"),
         ("Nurse", "Nurse")
     ]
-    type = models.CharField(max_length=50, choices=TYPES, default="Student")
+    type = models.CharField(max_length=50, choices=TYPES, default="Doctor")
 
     def __str__(self):
         return f"{self.type}-{self.user.last_name} {self.user.first_name}"
