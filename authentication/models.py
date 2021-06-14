@@ -9,7 +9,7 @@ from django.utils.deconstruct import deconstructible
 @deconstructible
 class ESISBAEmailValidator(EmailValidator):
     '''
-    A validator that validate email format and checks for 
+    A validator that validate email format and checks for
     the domain name to include"esi-sba.dz"
     '''
 
@@ -23,6 +23,9 @@ class ESISBAEmailValidator(EmailValidator):
 
 
 class User(AbstractUser):
+    '''
+    Base User Model
+    '''
     uid = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)
     GENDER = [
@@ -59,6 +62,9 @@ class User(AbstractUser):
 
 
 class Patient(models.Model):
+    '''
+    Patient role User, inherit from Base User
+    '''
     user = models.OneToOneField(to=User, on_delete=models.CASCADE)
     TYPES = [
         ("ATP", "ATP"),
@@ -78,3 +84,21 @@ class Patient(models.Model):
     education_level = models.CharField(
         max_length=50, choices=LEVELS, default="NONE")
     is_approaved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Patient-{self.type}-{self.user.last_name} {self.user.first_name}"
+
+
+class Doctor(models.Model):
+    '''
+    Doctor role User, inherit from Base User
+    '''
+    user = models.OneToOneField(to=User, on_delete=models.CASCADE)
+    TYPES = [
+        ("Doctor", "Doctor"),
+        ("Nurse", "Nurse")
+    ]
+    type = models.CharField(max_length=50, choices=TYPES, default="Student")
+
+    def __str__(self):
+        return f"{self.type}-{self.user.last_name} {self.user.first_name}"

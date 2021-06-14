@@ -1,11 +1,16 @@
 # e-clinic-back
-E-Clinic Backend (Django REST API) multidisciplinary project
 
+E-Clinic Backend (Django REST API) multidisciplinary project
 
 # Deployment
 
 ## Development
-  -`python manage.py runserver`
-  
+
+- pip install -r requirement.txt
+- python manage.py makemigrations
+- python manage.py migrate
+- `python manage.py runserver`
+
 ## Production
-  - I'll be dockerizing the project soon
+
+- I'll be dockerizing the project soon
