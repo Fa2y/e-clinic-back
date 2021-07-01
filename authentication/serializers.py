@@ -1,6 +1,8 @@
 from rest_framework import serializers
+from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
 from allauth.account.adapter import get_adapter
+from allauth.account.models import EmailAddress
 from .models import *
 
 
@@ -29,10 +31,14 @@ class PatientSerializer(serializers.ModelSerializer):
         model = Patient
         fields = '__all__'
 
+    @transaction.atomic
     def create(self, validated_data):
-        print("CREATING")
         user_data = validated_data.pop('user')
         user = User.objects.create(email=user_data.get('email'))
+        email_addr = EmailAddress.objects.create(
+            user=user, email=user_data.get('email'))
+        request = self.context['request']
+        email_addr.send_confirmation(request, True)
         password = get_adapter().clean_password(user_data.get('password1'))
         user.set_password(password)
         user.first_name = user_data.get('first_name', '')
@@ -53,7 +59,6 @@ class PatientSerializer(serializers.ModelSerializer):
         return instance
 
     def validate(self, attrs):
-        print("VALIDATING")
         user_data = attrs.get('user')
         if user_data['password1'] != user_data['password2']:
             raise serializers.ValidationError(
