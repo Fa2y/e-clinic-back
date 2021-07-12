@@ -14,5 +14,6 @@
   "python.linting.pycodestyleArgs": ["--ignore=E501"],
   "files.exclude": {
     "**/*.pyc": true
-  }
+  },
+  "python.formatting.provider": "yapf"
 }
