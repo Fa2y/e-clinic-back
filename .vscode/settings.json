@@ -1,6 +1,10 @@
 {
   "python.pythonPath": "/usr/bin/python",
+  "python.formatting.provider": "black",
   "editor.formatOnSave": true,
+  "[python]": {
+    "editor.formatOnPaste": false
+  },
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pylintPath": "pylint",
   "python.linting.pylintArgs": [
@@ -14,6 +18,5 @@
   "python.linting.pycodestyleArgs": ["--ignore=E501"],
   "files.exclude": {
     "**/*.pyc": true
-  },
-  "python.formatting.provider": "black"
+  }
 }

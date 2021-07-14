@@ -4,7 +4,7 @@ import uuid
 import datetime
 from django.core.validators import EmailValidator
 from django.utils.deconstruct import deconstructible
-from safedelete.models import SafeDeleteModel, SOFT_DELETE_CASCADE
+from safedelete.models import SafeDeleteModel, SOFT_DELETE_CASCADE, SOFT_DELETE
 
 
 @deconstructible
@@ -28,7 +28,7 @@ class User(AbstractUser, SafeDeleteModel):
     Base User Model
     """
 
-    _safedelete_policy = SOFT_DELETE_CASCADE
+    _safedelete_policy = SOFT_DELETE
 
     uid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     GENDER = [
