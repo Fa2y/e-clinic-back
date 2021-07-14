@@ -4,16 +4,17 @@ import uuid
 import datetime
 from django.core.validators import EmailValidator
 from django.utils.deconstruct import deconstructible
+from safedelete.models import SafeDeleteModel, SOFT_DELETE_CASCADE
 
 
 @deconstructible
 class ESISBAEmailValidator(EmailValidator):
-    '''
+    """
     A validator that validate email format and checks for
     the domain name to include"esi-sba.dz"
-    '''
+    """
 
-    message = 'Only esi-sba.dz emails are accepted.'
+    message = "Only esi-sba.dz emails are accepted."
 
     def validate_domain_part(self, domain_part):
         return False
@@ -22,32 +23,34 @@ class ESISBAEmailValidator(EmailValidator):
         return isinstance(other, ESISBAEmailValidator) and super().__eq__(other)
 
 
-class User(AbstractUser):
-    '''
+class User(AbstractUser, SafeDeleteModel):
+    """
     Base User Model
-    '''
-    uid = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False)
+    """
+
+    _safedelete_policy = SOFT_DELETE_CASCADE
+
+    uid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     GENDER = [
-        ('Male', 'Male'),
-        ('Female', 'Female'),
+        ("Male", "Male"),
+        ("Female", "Female"),
     ]
     username = models.CharField(null=True, max_length=150)
-    sex = models.CharField(max_length=200, choices=GENDER, default='Male')
+    sex = models.CharField(max_length=200, choices=GENDER, default="Male")
     ROLES = [
-        ('Admin', 'Admin'),
-        ('GRH', 'GRH'),
-        ('Doctor', 'Doctor'),
-        ('Nurse', 'Nurse'),
-        ('Patient', 'Patient')
+        ("Admin", "Admin"),
+        ("GRH", "GRH"),
+        ("Doctor", "Doctor"),
+        ("Nurse", "Nurse"),
+        ("Patient", "Patient"),
     ]
-    email = models.EmailField(unique=True,
-                              max_length=60,
-                              validators=[ESISBAEmailValidator(
-                                  allowlist=['esi-sba.dz'])]
-                              )
+    email = models.EmailField(
+        unique=True,
+        max_length=60,
+        validators=[ESISBAEmailValidator(allowlist=["esi-sba.dz"])],
+    )
     role = models.CharField(max_length=50, choices=ROLES, default="Patient")
-    image = models.ImageField(upload_to='userImages', blank=True)
+    image = models.ImageField(upload_to="userImages", blank=True)
     phone = models.CharField(max_length=200, blank=True)
     date_of_birth = models.DateField(default=datetime.date.today)
     city = models.CharField(max_length=2, blank=True)
@@ -55,28 +58,34 @@ class User(AbstractUser):
     is_confirmed = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     class Meta:
         verbose_name_plural = "User"
 
     def __str__(self):
-        return str(self.uid) + " - " + self.email + " - " + self.first_name + " - " + self.last_name
+        return (
+            str(self.uid)
+            + " - "
+            + self.email
+            + " - "
+            + self.first_name
+            + " - "
+            + self.last_name
+        )
 
 
-class Patient(models.Model):
-    '''
+class Patient(SafeDeleteModel):
+    """
     Patient role User, inherit from Base User
-    '''
-    pid = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False)
+    """
+
+    _safedelete_policy = SOFT_DELETE_CASCADE
+
+    pid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(to=User, on_delete=models.CASCADE)
-    TYPES = [
-        ("ATP", "ATP"),
-        ("Student", "Student"),
-        ("Teacher", "Teacher")
-    ]
+    TYPES = [("ATP", "ATP"), ("Student", "Student"), ("Teacher", "Teacher")]
     type = models.CharField(max_length=50, choices=TYPES, default="Student")
     LEVELS = [
         # in case of ATP
@@ -96,8 +105,7 @@ class Patient(models.Model):
         ("3CS-ISI", "3CS-ISI"),
         ("3CS-SIW", "3CS-SIW"),
     ]
-    education_level = models.CharField(
-        max_length=50, choices=LEVELS, default="NONE")
+    education_level = models.CharField(max_length=50, choices=LEVELS, default="NONE")
     is_approved = models.BooleanField(default=False)
 
     def __str__(self):
