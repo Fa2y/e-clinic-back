@@ -5,10 +5,11 @@ from .serializers import *
 from .models import *
 
 
-class PatientView(viewsets.ModelViewSet):
+class PatientViewSet(viewsets.ModelViewSet):
     """
-        Patient APIView:
+    Patient ModelViewSet:
     """
+
     queryset = Patient.objects.all()
     serializer_class = PatientSerializer
 
@@ -16,3 +17,12 @@ class PatientView(viewsets.ModelViewSet):
         context = super().get_serializer_context()
         context.update({"request": self.request})
         return context
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    User ModelViewSet:
+    """
+
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
