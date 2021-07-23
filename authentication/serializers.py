@@ -67,14 +67,17 @@ class PatientSerializer(serializers.ModelSerializer):
         return instance
 
     def validate(self, attrs):
-        user_data = attrs.get("user")
+        user_data = attrs.get("user", False)
+        if not user_data:
+            return attrs
         if user_data["password1"] != user_data["password2"]:
             raise serializers.ValidationError(
                 _("The two password fields didn't match.")
             )
 
         if attrs.get("type") == "ATP" and attrs.get("education_level") != "NONE":
-            raise serializers.ValidationError(_("ATP's education level must be NONE!"))
+            raise serializers.ValidationError(
+                _("ATP's education level must be NONE!"))
 
         if attrs.get("type") == "Student" and attrs.get("education_level") not in [
             "1CPI",
@@ -85,7 +88,8 @@ class PatientSerializer(serializers.ModelSerializer):
             "3CS-ISI",
             "3CS-SIW",
         ]:
-            raise serializers.ValidationError(_("invalid education level for student"))
+            raise serializers.ValidationError(
+                _("invalid education level for student"))
 
         if attrs.get("type") == "Teacher" and attrs.get("education_level") not in [
             "MA-A",
@@ -94,5 +98,6 @@ class PatientSerializer(serializers.ModelSerializer):
             "MC-B",
             "Professor",
         ]:
-            raise serializers.ValidationError(_("invalid education level for Teacher"))
+            raise serializers.ValidationError(
+                _("invalid education level for Teacher"))
         return attrs
