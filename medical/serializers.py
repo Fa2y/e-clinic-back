@@ -6,66 +6,49 @@ from authentication.serializers import *
 
 
 class UserFiltredSerializer(serializers.ModelSerializer):
-    
     class Meta:
-        model=User
-        fields=[
-            "first_name",
-            "last_name"
-        ]
-
-
+        model = User
+        fields = ["first_name", "last_name"]
 
 
 class PatientFiltredSerializer(serializers.ModelSerializer):
 
-    user=UserFiltredSerializer()
+    user = UserFiltredSerializer()
+
     class Meta:
-        model=Patient
-        fields=[
-            "pid",
-            "user"
-        ]
-            
-            
-        
-  
+        model = Patient
+        fields = ["pid", "user"]
 
 
 class MedicalExamSerializer(serializers.ModelSerializer):
-    '''
+    """
     medical exam serializer
-    '''
-    patient=PatientFiltredSerializer()
+    """
+
+    patient = PatientFiltredSerializer()
 
     class Meta:
-        model= MedicalExam
+        model = MedicalExam
 
-        fields="__all__"
+        fields = "__all__"
 
 
 class MedicalExamFiltredSerializer(serializers.ModelSerializer):
-    
-
     class Meta:
-        model= MedicalExam
+        model = MedicalExam
 
-        fields=[
-            
+        fields = [
             "id",
-            
             "doctor_name",
         ]
 
 
 class MedicalRecordSerializer(serializers.ModelSerializer):
-    '''medical record serializer'''
+    """medical record serializer"""
 
-    patient=PatientFiltredSerializer()
-    screening=MedicalExamFiltredSerializer()
+    patient = PatientFiltredSerializer()
+    screening = MedicalExamFiltredSerializer()
 
     class Meta:
-        model=MedicalRecord
-        fields="__all__"
-    
-   
+        model = MedicalRecord
+        fields = "__all__"

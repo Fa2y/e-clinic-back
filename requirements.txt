@@ -1,6 +1,7 @@
-django_safedelete==0.5.7
-django_allauth==0.44.0
-dj_rest_auth==2.1.7
 Django==3.2.3
+dj_rest_auth==2.1.7
+django_allauth==0.44.0
+django_multiselectfield==0.1.12
+django_safedelete==0.5.7
 djangorestframework==3.12.4
-whitenoise==5.2.0
+whitenoise==5.3.0
