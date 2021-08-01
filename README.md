@@ -6,10 +6,17 @@ E-Clinic Backend (Django REST API) multidisciplinary project
 
 ## Development
 
-- pip install -r requirement.txt
-- python manage.py makemigrations
-- python manage.py migrate
-- `python manage.py runserver`
+### Auto Scripts
+
+    python3 setup.py
+
+### OR Setup Manually (In case of errors)
+
+- `pip install -r requirements.txt`
+- `python3 manage.py makemigrations authentication medical`
+- `python3 manage.py migrate`
+- `python3 manage.py loaddata data.json`
+- `python3 manage.py runserver`
 
 ## Production
 
