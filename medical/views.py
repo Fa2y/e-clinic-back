@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from .serializers import *
 from .models import *
 
@@ -24,6 +24,13 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
 
     queryset = MedicalRecord.objects.all()
     serializer_class = MedicalRecordSerializer
+    filter_backends = (filters.SearchFilter,)
+    search_fields = [
+        "patient__user__first_name",
+        "patient__user__last_name",
+        "patient__type",
+        "patient__education_level",
+    ]
 
     def get_serializer_context(self):
         context = super().get_serializer_context()

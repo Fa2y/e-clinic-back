@@ -146,7 +146,9 @@ class MedicalRecord(models.Model):
     allergic_reaction = models.TextField(blank=True)
 
     # every medical record can include many medical exams
-    screening = models.ForeignKey(MedicalExam, on_delete=models.CASCADE)
+    screening = models.ForeignKey(
+        MedicalExam, blank=True, null=True, on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f"MedicalRecord-for the patient:{self.biometric}-{self.patient.user.last_name} {self.patient.user.first_name}"

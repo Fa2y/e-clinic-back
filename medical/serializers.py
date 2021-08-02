@@ -17,7 +17,7 @@ class PatientFiltredSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Patient
-        fields = ["pid", "user"]
+        fields = ["pid", "user", "type", "education_level"]
 
 
 class MedicalExamSerializer(serializers.ModelSerializer):
@@ -46,9 +46,18 @@ class MedicalExamFiltredSerializer(serializers.ModelSerializer):
 class MedicalRecordSerializer(serializers.ModelSerializer):
     """medical record serializer"""
 
-    patient = PatientFiltredSerializer()
-    screening = MedicalExamFiltredSerializer()
+    patient_data = PatientFiltredSerializer(source="patient", read_only=True)
+    patient = serializers.PrimaryKeyRelatedField(
+        queryset=Patient.objects.all()
+    )  # PatientFiltredSerializer()
+    screening = serializers.PrimaryKeyRelatedField(
+        many=True, queryset=MedicalExam.objects.all(), required=False
+    )
 
     class Meta:
         model = MedicalRecord
         fields = "__all__"
+
+    # def create(self, validated_data):
+    #     print(validated_data)
+    #     pass
