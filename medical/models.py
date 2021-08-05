@@ -15,19 +15,19 @@ class MedicalExam(models.Model):
 
     date = models.DateField(auto_now=False, auto_now_add=False)
 
-    doctor_name = models.CharField(max_length=100)
+    doctor_name = models.CharField(blank=True, max_length=100)
 
-    wieght = models.IntegerField(max_length=2)
-    height = models.IntegerField(max_length=2)
+    wieght = models.DecimalField(max_digits=9, decimal_places=6)
+    height = models.DecimalField(max_digits=9, decimal_places=6)
 
-    hearing_right = models.CharField(max_length=20)
-    hearing_left = models.CharField(max_length=20)
+    hearing_right = models.CharField(blank=True, max_length=20)
+    hearing_left = models.CharField(blank=True, max_length=20)
 
-    visual_acuity_with_correction_left = models.CharField(max_length=20)
-    visual_acuity_with_correction_right = models.CharField(max_length=20)
-    visual_acuity_without_correction_left = models.CharField(max_length=20)
+    visual_acuity_with_correction_left = models.CharField(blank=True, max_length=20)
+    visual_acuity_with_correction_right = models.CharField(blank=True, max_length=20)
+    visual_acuity_without_correction_left = models.CharField(blank=True, max_length=20)
     visual_acuity_without_correction_right = models.CharField(
-        max_length=20, default=" "
+        blank=True, max_length=20, default=" "
     )
 
     SKINPROBLEMS = [("skin infection", "skin infection")]
@@ -90,9 +90,9 @@ class MedicalExam(models.Model):
     digestive_exam = models.TextField(blank=True)
 
     aptitude = models.BooleanField(
-        default=False
+        blank=True, default=False
     )  # apt=True inapt=False the default is inapt
-    reason = models.TextField(blank=False)
+    reason = models.TextField(blank=True)
 
     # orientation
     orientation_specialist = models.CharField(max_length=100, blank=True)

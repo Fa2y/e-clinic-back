@@ -2,8 +2,17 @@ from rest_framework.response import Response
 from rest_framework import status, viewsets, mixins
 from rest_framework.decorators import action
 from rest_framework.exceptions import NotFound, ParseError
+from dj_rest_auth.registration.views import RegisterView
 from .serializers import *
 from .models import *
+
+
+class PatientRegisterView(RegisterView):
+    serializer_class = PatientSerializer
+
+    def perform_create(self, serializer):
+        user = serializer.save(self.request)
+        return user
 
 
 class PatientViewSet(viewsets.ModelViewSet):

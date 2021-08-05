@@ -25,34 +25,27 @@ class MedicalExamSerializer(serializers.ModelSerializer):
     medical exam serializer
     """
 
-    patient = PatientFiltredSerializer()
+    patient_data = PatientFiltredSerializer(source="patient", read_only=True)
+    patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
+
+    def create(self, validated_data):
+        request = self.context["request"]
+        validated_data[
+            "doctor_name"
+        ] = f"Dr. {request.user.last_name} {request.user.first_name}"
+        return super().create(validated_data)
 
     class Meta:
         model = MedicalExam
-
         fields = "__all__"
-
-
-class MedicalExamFiltredSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MedicalExam
-
-        fields = [
-            "id",
-            "doctor_name",
-        ]
 
 
 class MedicalRecordSerializer(serializers.ModelSerializer):
     """medical record serializer"""
 
     patient_data = PatientFiltredSerializer(source="patient", read_only=True)
-    patient = serializers.PrimaryKeyRelatedField(
-        queryset=Patient.objects.all()
-    )  # PatientFiltredSerializer()
-    screening = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=MedicalExam.objects.all(), required=False
-    )
+    patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
+    screening = MedicalExamSerializer(many=True, read_only=True, required=False)
 
     class Meta:
         model = MedicalRecord
