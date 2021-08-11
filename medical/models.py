@@ -3,7 +3,18 @@ from django.db import models
 from multiselectfield import MultiSelectField
 from authentication.models import *
 
-# Create your models here.
+
+def validate_file_extension(value):
+    """
+    Validator for uploaded files extenstions
+    """
+    import os
+    from django.core.exceptions import ValidationError
+
+    ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
+    valid_extensions = [".pdf", ".doc", ".docx", ".jpg", ".png", ".xlsx", ".xls"]
+    if not ext.lower() in valid_extensions:
+        raise ValidationError("Unsupported file extension.")
 
 
 class MedicalExam(models.Model):
@@ -13,10 +24,88 @@ class MedicalExam(models.Model):
 
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 
-    date = models.DateField(auto_now=False, auto_now_add=False)
+    date = models.DateField(auto_now_add=True)
 
     doctor_name = models.CharField(blank=True, max_length=100)
 
+    clinical_exam = models.TextField(blank=False, max_length=400)
+
+    paraclinical_exam = models.FileField(
+        upload_to="docs/praclinicals/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+    medical_report = models.FileField(
+        upload_to="docs/med_reports/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+    orientation = models.FileField(
+        upload_to="docs/orientations/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+    evacuation = models.FileField(
+        upload_to="docs/evacuations/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+    certificat = models.FileField(
+        upload_to="docs/certificats/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+    ordanance = models.FileField(
+        upload_to="docs/ordanances/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+    def __str__(self):
+        return f"MedicalExam-doctor:{self.doctor_name}-Patient{self.patient.user.last_name} {self.patient.user.first_name}- date:{self.date}"
+
+
+class MedicalRecord(models.Model):
+    """
+    every medical record has one owner(patient)
+    """
+
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE, unique=True)
+
+    social_number = models.BigIntegerField(unique=True)
+    biometric = models.CharField(max_length=200, unique=True)
+
+    tobaco_consumption = models.BooleanField(default=False)
+    PRODUCT = [
+        ("smoking tobaco", "smoking tobaco"),
+        ("chewing tobaco", "chewing tobaco"),
+        ("injection tobaco", "injection tobaco"),
+    ]
+
+    tobaco_taken_as = models.CharField(max_length=50, choices=PRODUCT, blank=True)
+    number_units = models.IntegerField(max_length=2, blank=True, null=True)
+
+    alcohol_consumption = models.BooleanField(default=False)
+
+    medication_consumption = models.BooleanField(default=False)
+    medications = models.TextField(blank=True)
+
+    other = models.TextField(blank=True)
+
+    general_diseases = models.TextField(blank=True)
+    surgical_intervention = models.TextField(blank=True)
+    congenital_condition = models.TextField(blank=True)
+    allergic_reaction = models.TextField(blank=True)
+
+    # every medical record can include many medical exams
+    screening = models.ForeignKey(
+        MedicalExam, blank=True, null=True, on_delete=models.CASCADE
+    )
     wieght = models.DecimalField(max_digits=9, decimal_places=6)
     height = models.DecimalField(max_digits=9, decimal_places=6)
 
@@ -108,47 +197,6 @@ class MedicalExam(models.Model):
     )
 
     orientation_response = models.TextField(blank=True)
-
-    def __str__(self):
-        return f"MedicalExam-doctor:{self.doctor_name}-Patient{self.patient.user.last_name} {self.patient.user.first_name}date:{self.date}"
-
-
-class MedicalRecord(models.Model):
-    """
-    every medical record has one owner(patient)
-    """
-
-    patient = models.ForeignKey(Patient, on_delete=models.CASCADE, unique=True)
-
-    social_number = models.BigIntegerField(unique=True)
-    biometric = models.CharField(max_length=200, unique=True)
-
-    tobaco_consumption = models.BooleanField(default=False)
-    PRODUCT = [
-        ("smoking tobaco", "smoking tobaco"),
-        ("chewing tobaco", "chewing tobaco"),
-        ("injection tobaco", "injection tobaco"),
-    ]
-
-    tobaco_taken_as = models.CharField(max_length=50, choices=PRODUCT, blank=True)
-    number_units = models.IntegerField(max_length=2, blank=True, null=True)
-
-    alcohol_consumption = models.BooleanField(default=False)
-
-    medication_consumption = models.BooleanField(default=False)
-    medications = models.TextField(blank=True)
-
-    other = models.TextField(blank=True)
-
-    general_diseases = models.TextField(blank=True)
-    surgical_intervention = models.TextField(blank=True)
-    congenital_condition = models.TextField(blank=True)
-    allergic_reaction = models.TextField(blank=True)
-
-    # every medical record can include many medical exams
-    screening = models.ForeignKey(
-        MedicalExam, blank=True, null=True, on_delete=models.CASCADE
-    )
 
     def __str__(self):
         return f"MedicalRecord-for the patient:{self.biometric}-{self.patient.user.last_name} {self.patient.user.first_name}"

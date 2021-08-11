@@ -6,12 +6,19 @@ from authentication.serializers import *
 
 
 class UserFiltredSerializer(serializers.ModelSerializer):
+    """
+    User serializer for nested user in patient
+    """
+
     class Meta:
         model = User
         fields = ["first_name", "last_name"]
 
 
 class PatientFiltredSerializer(serializers.ModelSerializer):
+    """
+    Patient serializer for medical exams and records
+    """
 
     user = UserFiltredSerializer()
 
@@ -22,7 +29,7 @@ class PatientFiltredSerializer(serializers.ModelSerializer):
 
 class MedicalExamSerializer(serializers.ModelSerializer):
     """
-    medical exam serializer
+    Medical Exam serializer
     """
 
     patient_data = PatientFiltredSerializer(source="patient", read_only=True)
@@ -41,7 +48,9 @@ class MedicalExamSerializer(serializers.ModelSerializer):
 
 
 class MedicalRecordSerializer(serializers.ModelSerializer):
-    """medical record serializer"""
+    """
+    Medical Record serializer
+    """
 
     patient_data = PatientFiltredSerializer(source="patient", read_only=True)
     patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
@@ -50,7 +59,3 @@ class MedicalRecordSerializer(serializers.ModelSerializer):
     class Meta:
         model = MedicalRecord
         fields = "__all__"
-
-    # def create(self, validated_data):
-    #     print(validated_data)
-    #     pass
