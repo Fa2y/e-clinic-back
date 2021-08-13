@@ -547,6 +547,7 @@
   "model": "medical.medicalexam",
   "pk": 1,
   "fields": {
+    "deleted": null,
     "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
     "date": "2021-08-17",
     "doctor_name": "Dr.  ",
@@ -563,6 +564,7 @@
   "model": "medical.medicalrecord",
   "pk": 1,
   "fields": {
+    "deleted": null,
     "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
     "social_number": 22,
     "biometric": "23",
@@ -611,6 +613,7 @@
   "model": "medical.medicalrecord",
   "pk": 2,
   "fields": {
+    "deleted": null,
     "patient": "ba8b1d92-eda7-406e-aabf-6c0f9c44e74a",
     "social_number": 102,
     "biometric": "66",

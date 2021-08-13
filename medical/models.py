@@ -2,6 +2,7 @@ import datetime
 from django.db import models
 from multiselectfield import MultiSelectField
 from authentication.models import *
+from safedelete.models import SafeDeleteModel, SOFT_DELETE_CASCADE, SOFT_DELETE
 
 
 def validate_file_extension(value):
@@ -17,10 +18,12 @@ def validate_file_extension(value):
         raise ValidationError("Unsupported file extension.")
 
 
-class MedicalExam(models.Model):
+class MedicalExam(SafeDeleteModel):
     """
     every medical exam has one owner(patient)
     """
+
+    _safedelete_policy = SOFT_DELETE_CASCADE
 
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 
@@ -70,10 +73,12 @@ class MedicalExam(models.Model):
         return f"MedicalExam-doctor:{self.doctor_name}-Patient{self.patient.user.last_name} {self.patient.user.first_name}- date:{self.date}"
 
 
-class MedicalRecord(models.Model):
+class MedicalRecord(SafeDeleteModel):
     """
     every medical record has one owner(patient)
     """
+
+    _safedelete_policy = SOFT_DELETE_CASCADE
 
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, unique=True)
 
