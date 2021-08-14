@@ -15,4 +15,5 @@ urlpatterns = [
     ),
     path("", include("authentication.urls")),
     path("", include("medical.urls")),
+    path("", include("appointment.urls")),
 ]
