@@ -84,7 +84,9 @@ class Patient(SafeDeleteModel):
     _safedelete_policy = SOFT_DELETE_CASCADE
 
     pid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.OneToOneField(to=User, on_delete=models.CASCADE)
+    user = models.OneToOneField(
+        to=User, related_name="patient", on_delete=models.CASCADE
+    )
     TYPES = [("ATP", "ATP"), ("Student", "Student"), ("Teacher", "Teacher")]
     type = models.CharField(max_length=50, choices=TYPES, default="Student")
     LEVELS = [

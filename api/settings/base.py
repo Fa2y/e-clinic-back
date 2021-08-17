@@ -98,7 +98,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_UNIQUE_USERNAME = False
 OLD_PASSWORD_FIELD_ENABLED = True
 REST_AUTH_SERIALIZERS = {
-    "USER_DETAILS_SERIALIZER": "authentication.serializers.UserSerializer"
+    "USER_DETAILS_SERIALIZER": "authentication.serializers.UserProfileSerializer"
 }
 LOGIN_URL = "http://localhost:8000/rest-auth/login/"
 # For email verification

@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from dj_rest_auth.serializers import UserDetailsSerializer
 from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
 from allauth.account.adapter import get_adapter
@@ -102,3 +103,21 @@ class PatientSerializer(serializers.ModelSerializer):
     def save(self, request):
         print(request)
         return super().save()
+
+
+class PatientProfileSerializer(serializers.ModelSerializer):
+    """
+    Patient Model Serializer
+    Excluded Fields: is_approved(default=False)
+    """
+
+    class Meta:
+        model = Patient
+        exclude = ("user",)
+
+
+class UserProfileSerializer(UserDetailsSerializer):
+    patient = PatientProfileSerializer()
+
+    class Meta(UserSerializer.Meta):
+        pass
