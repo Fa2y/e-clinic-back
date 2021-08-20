@@ -63,9 +63,6 @@ class PatientAppointmentSerializer(serializers.ModelSerializer):
 
     patient_data = PatientSerializer(source="patient", read_only=True)
     doctor_data = PatientSerializer(source="assigned_to", read_only=True)
-    patient = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Patient.objects.all()
-    )
     logged_by = serializers.PrimaryKeyRelatedField(read_only=True)
     assigned_to = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
 

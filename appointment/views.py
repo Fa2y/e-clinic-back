@@ -23,12 +23,14 @@ class PatientAppointmentViewSet(viewsets.ModelViewSet):
 
     serializer_class = PatientAppointmentSerializer
     queryset = Appointment.objects.all()
-    permission_classes = [PatientPermission]
+    # to do uncomment this line 
+    #permission_classes = [PatientPermission]
 
     def get_queryset(self):
         user = self.request.user
         patient = Patient.objects.get(user=user.pk)
-        return Appointment.objects.filter(patient=patient)
+        queryset = Appointment.objects.filter(patient=patient)
+        return queryset
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
