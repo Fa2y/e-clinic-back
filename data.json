@@ -9,6 +9,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "914sck9mmaijtesi40vl3ke7lvjbidsv",
+  "fields": {
+    "session_data": ".eJxVjE0OgjAQRu_StZC2dNqOO70ImXamgUggkbIy3l0wLHT5_bz3Uj1tdei3VZ79yOqqJAYxGLgR7VPjLNsmli41ULCYYApZAXX5xRLlh8wHS9N01C3lvGxzbb-fc17b255krmOmOi7z_aT-VAOtw-6JQB0H9h6SsejRoQTtdOxKEesLZ0kGSMDrCIjswGEksEgcEpvg1fsDQI9FYA:1mAy4d:c9wvildhYAwZltxttkrmasRJEtSBEF4wmOZrSN4b5x8",
+    "expire_date": "2021-08-17T17:19:27.487Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "9ttppifo6fkt4ldod78d9rqz95rmtfw0",
   "fields": {
     "session_data": ".eJxVjE0OgjAQRu_StZC2dNqOO70ImXamgUggkbIy3l0wLHT5_bz3Uj1tdei3VZ79yOqqJAYxGLgR7VPjLNsmli41ULCYYApZAXX5xRLlh8wHS9N01C3lvGxzbb-fc17b255krmOmOi7z_aT-VAOtw-6JQB0H9h6SsejRoQTtdOxKEesLZ0kGSMDrCIjswGEksEgcEpvg1fsDQI9FYA:1lz1eI:Z_mZUJDfBoW2OixN8Xy2fbo7w3ELz4Wxk66m_NT-WIY",
@@ -77,6 +85,33 @@
     "address": "",
     "is_confirmed": false,
     "created_on": "2021-07-18T01:37:41.165Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$qWw2442nxHB2ZtG2BYvzJe$6RiFw2dr7z/IPUVg10aToEUab82CTVzZGObhNKdPLlA=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Seyf Eddine",
+    "last_name": "Hasnaoui",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-05T11:45:13.481Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fake.email123@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+2135566333",
+    "date_of_birth": "2021-08-05",
+    "city": "32",
+    "address": "Telmcen Centre",
+    "is_confirmed": false,
+    "created_on": "2021-08-05T11:45:13.482Z",
     "groups": [],
     "user_permissions": []
   }
@@ -158,6 +193,33 @@
     "address": "",
     "is_confirmed": false,
     "created_on": "2021-07-23T22:47:28.964Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$W6cYeFIewDheSU9mu7v0SB$/BANA5UV7fS7tqenQYeGa1cg3sxAiivOgfMRd8Bfg/M=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Seyf Eddine",
+    "last_name": "Hasnaoui",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-05T11:27:23.756Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fake.email5@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+2135566333",
+    "date_of_birth": "2021-08-05",
+    "city": "32",
+    "address": "Telmcen Centre",
+    "is_confirmed": false,
+    "created_on": "2021-08-05T11:27:23.756Z",
     "groups": [],
     "user_permissions": []
   }
@@ -273,14 +335,68 @@
 {
   "model": "authentication.user",
   "fields": {
+    "password": "pbkdf2_sha256$260000$HTVdUcb04DHAhmdZDrm67w$fk7tKsh/EhxmbTPHlF22VeqwJtVqTSMklpFt2K1D2Gs=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Seyf Eddine",
+    "last_name": "Hasnaoui",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-05T11:41:51.068Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fake.email1337@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+2135566333",
+    "date_of_birth": "2021-08-05",
+    "city": "32",
+    "address": "Telmcen Centre",
+    "is_confirmed": false,
+    "created_on": "2021-08-05T11:41:51.069Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$Hgak4OYTbXoB54lMuzaLbV$ENFzPejF7MlTtf+wG2o4rRiK8ERaEgjxh815bnpBLpw=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Seyf Eddine",
+    "last_name": "Hasnaoui",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-05T11:42:47.447Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fake.email69@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+2135566333",
+    "date_of_birth": "2021-08-05",
+    "city": "32",
+    "address": "Telmcen Centre",
+    "is_confirmed": false,
+    "created_on": "2021-08-05T11:42:47.447Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
     "password": "pbkdf2_sha256$260000$rAl0UFMTRCyyPDV71XJ2OP$98TqvSUkcgpkb8Z0Z/RUri67OlNf4PwUYU3W/svIdUQ=",
-    "last_login": "2021-08-02T11:19:38.016Z",
+    "last_login": "2021-08-03T17:19:27Z",
     "is_superuser": true,
-    "first_name": "",
-    "last_name": "",
+    "first_name": "Admin First Name",
+    "last_name": "Admin Last Name",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2021-06-29T18:53:17.719Z",
+    "date_joined": "2021-06-29T18:53:17Z",
     "deleted": null,
     "username": "admin",
     "sex": "Male",
@@ -312,6 +428,32 @@
 },
 {
   "model": "authentication.patient",
+  "pk": "3e034da8-980a-487d-b8a0-238a94975255",
+  "fields": {
+    "deleted": null,
+    "user": [
+      "fake.email69@esi-sba.dz"
+    ],
+    "type": "Student",
+    "education_level": "1CS",
+    "is_approved": false
+  }
+},
+{
+  "model": "authentication.patient",
+  "pk": "410e876f-81cc-4877-b1be-03fdfbbb2e79",
+  "fields": {
+    "deleted": null,
+    "user": [
+      "fake.email123@esi-sba.dz"
+    ],
+    "type": "Student",
+    "education_level": "1CS",
+    "is_approved": false
+  }
+},
+{
+  "model": "authentication.patient",
   "pk": "86002cef-bc64-4668-9c56-39800f82dd33",
   "fields": {
     "deleted": null,
@@ -338,6 +480,19 @@
 },
 {
   "model": "authentication.patient",
+  "pk": "9babfdf0-adcc-4dcd-9c93-c964d9aef20c",
+  "fields": {
+    "deleted": null,
+    "user": [
+      "fake.email1337@esi-sba.dz"
+    ],
+    "type": "Student",
+    "education_level": "1CS",
+    "is_approved": false
+  }
+},
+{
+  "model": "authentication.patient",
   "pk": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
   "fields": {
     "deleted": null,
@@ -347,6 +502,19 @@
     "type": "Student",
     "education_level": "1CS",
     "is_approved": true
+  }
+},
+{
+  "model": "authentication.patient",
+  "pk": "b542abe1-6a5e-4c1c-8558-5e02a5933746",
+  "fields": {
+    "deleted": null,
+    "user": [
+      "fake.email5@esi-sba.dz"
+    ],
+    "type": "Student",
+    "education_level": "1CS",
+    "is_approved": false
   }
 },
 {
@@ -376,9 +544,27 @@
   }
 },
 {
+  "model": "medical.medicalexam",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
+    "date": "2021-08-17",
+    "doctor_name": "Dr.  ",
+    "clinical_exam": "Clinical Exam description for this specific patient",
+    "paraclinical_exam": "",
+    "medical_report": "",
+    "orientation": "",
+    "evacuation": "",
+    "certificat": "",
+    "ordanance": ""
+  }
+},
+{
   "model": "medical.medicalrecord",
   "pk": 1,
   "fields": {
+    "deleted": null,
     "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
     "social_number": 22,
     "biometric": "23",
@@ -393,7 +579,83 @@
     "surgical_intervention": "zzz",
     "congenital_condition": "aaa",
     "allergic_reaction": "aaa",
-    "screening": null
+    "screening": null,
+    "wieght": "75.000000",
+    "height": "180.000000",
+    "hearing_right": "",
+    "hearing_left": "",
+    "visual_acuity_with_correction_left": "",
+    "visual_acuity_with_correction_right": "",
+    "visual_acuity_without_correction_left": "",
+    "visual_acuity_without_correction_right": " ",
+    "skin_state": "",
+    "skin_exam": "",
+    "ophtalmological_state": "",
+    "ophtalmological_exam": "",
+    "orl_state": "",
+    "orl_exam": "",
+    "locomotor_case": "",
+    "locomotor_exam": "",
+    "respiratory_state": "",
+    "respiratory_exam": "",
+    "cardiovascular_state": "",
+    "cardiovascular_exam": "",
+    "digestive_state": "",
+    "digestive_exam": "",
+    "aptitude": false,
+    "reason": "",
+    "orientation_specialist": "",
+    "orientation_cause": "notice",
+    "orientation_response": ""
+  }
+},
+{
+  "model": "medical.medicalrecord",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "patient": "ba8b1d92-eda7-406e-aabf-6c0f9c44e74a",
+    "social_number": 102,
+    "biometric": "66",
+    "tobaco_consumption": true,
+    "tobaco_taken_as": "injection tobaco",
+    "number_units": 2,
+    "alcohol_consumption": true,
+    "medication_consumption": true,
+    "medications": "no",
+    "other": "",
+    "general_diseases": "diabett",
+    "surgical_intervention": "no",
+    "congenital_condition": "yes",
+    "allergic_reaction": "no",
+    "screening": null,
+    "wieght": "75.000000",
+    "height": "180.000000",
+    "hearing_right": "",
+    "hearing_left": "",
+    "visual_acuity_with_correction_left": "",
+    "visual_acuity_with_correction_right": "",
+    "visual_acuity_without_correction_left": "",
+    "visual_acuity_without_correction_right": " ",
+    "skin_state": "",
+    "skin_exam": "",
+    "ophtalmological_state": "",
+    "ophtalmological_exam": "",
+    "orl_state": "",
+    "orl_exam": "",
+    "locomotor_case": "",
+    "locomotor_exam": "",
+    "respiratory_state": "",
+    "respiratory_exam": "",
+    "cardiovascular_state": "",
+    "cardiovascular_exam": "",
+    "digestive_state": "",
+    "digestive_exam": "",
+    "aptitude": false,
+    "reason": "",
+    "orientation_specialist": "",
+    "orientation_cause": "notice",
+    "orientation_response": ""
   }
 },
 {
@@ -525,6 +787,54 @@
   }
 },
 {
+  "model": "account.emailaddress",
+  "pk": 12,
+  "fields": {
+    "user": [
+      "fake.email5@esi-sba.dz"
+    ],
+    "email": "fake.email5@esi-sba.dz",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "fake.email1337@esi-sba.dz"
+    ],
+    "email": "fake.email1337@esi-sba.dz",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "fake.email69@esi-sba.dz"
+    ],
+    "email": "fake.email69@esi-sba.dz",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "fake.email123@esi-sba.dz"
+    ],
+    "email": "fake.email123@esi-sba.dz",
+    "verified": false,
+    "primary": false
+  }
+},
+{
   "model": "admin.logentry",
   "pk": 1,
   "fields": {
@@ -630,6 +940,24 @@
     "object_repr": "acdc20e71112d0b7907d4621c99d7f80c2f257a0",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2021-08-03T17:36:26.678Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "authentication",
+      "user"
+    ],
+    "object_id": "e87e197d-e06b-42d2-8f3b-5f9f171fa2e5",
+    "object_repr": "e87e197d-e06b-42d2-8f3b-5f9f171fa2e5 - e-clinic@esi-sba.dz - Admin First Name - Admin Last Name",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
   }
 }
 ]
