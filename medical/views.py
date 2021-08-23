@@ -1,4 +1,7 @@
 from rest_framework import viewsets, filters
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.http import Http404
 from .serializers import *
 from .models import *
 
@@ -36,3 +39,24 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
         context = super().get_serializer_context()
         context.update({"request": self.request})
         return context
+
+
+class PatientMedicalRecordAPIView(APIView):
+    """
+    Retrieve The medical record for the Patient requesting it
+    """
+
+    def get_object(self, patient):
+        try:
+            return MedicalRecord.objects.get(patient=patient)
+        except MedicalRecord.DoesNotExist:
+            raise Http404
+
+    def get(self, request):
+        """
+        GET : retrieve medical record for patient
+        """
+        patient = Patient.objects.get(user=request.user)
+        medical_record = self.get_object(patient)
+        serializer = MedicalRecordSerializer(medical_record)
+        return Response(serializer.data)
