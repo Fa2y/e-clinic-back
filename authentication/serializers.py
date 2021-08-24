@@ -100,7 +100,7 @@ class PatientSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(_("invalid education level for Teacher"))
         return attrs
 
-    def save(self, request):
+    def save(self, request=None):
         print(request)
         return super().save()
 
