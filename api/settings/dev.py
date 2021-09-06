@@ -2,7 +2,7 @@
 
 from .base import *
 
-ALLOWED_HOSTS += ["127.0.0.1", "localhost", "33a2-105-235-139-78.ngrok.io"]
+ALLOWED_HOSTS += ["127.0.0.1", "localhost"]
 DEBUG = True
 
 WSGI_APPLICATION = "api.wsgi.dev.application"

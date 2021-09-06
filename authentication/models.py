@@ -50,7 +50,7 @@ class User(AbstractUser, SafeDeleteModel):
         validators=[ESISBAEmailValidator(allowlist=["esi-sba.dz"])],
     )
     role = models.CharField(max_length=50, choices=ROLES, default="Patient")
-    image = models.ImageField(upload_to="userImages", blank=True)
+    image = models.ImageField(upload_to="userImages", blank=True, null=True)
     phone = models.CharField(max_length=200, blank=True)
     date_of_birth = models.DateField(default=datetime.date.today)
     city = models.CharField(max_length=2, blank=True)
