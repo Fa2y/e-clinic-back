@@ -2,6 +2,7 @@ env
 **/*.pyc
 **/__pycache__
 **/migrations
+media/**
 db.sqlite3
 node_modules
 build

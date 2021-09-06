@@ -1,12 +1,14 @@
-import subprocess, os
+import os
 from django.core.management import call_command
 import django
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api.settings.dev")
-APPS = ["authentication", "medical"]
+APPS = ["authentication", "medical", "appointment"]
 
 
 def install():
+    import subprocess
+
     subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
 
 
