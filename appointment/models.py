@@ -19,7 +19,11 @@ class Appointment(SafeDeleteModel):
     date = models.DateTimeField()
     comment = models.CharField(blank=True, null=True, max_length=255)
     assigned_to = models.ForeignKey(
-        User, related_name="doctor_assigned", on_delete=models.CASCADE,null=True,blank=True
+        User,
+        related_name="doctor_assigned",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
     )
     logged_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

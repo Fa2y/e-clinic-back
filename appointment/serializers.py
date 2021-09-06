@@ -61,15 +61,12 @@ class PatientAppointmentSerializer(serializers.ModelSerializer):
     Appoinment Serializer for patients
     """
 
-    #patient_data = PatientSerializer(source="patient", read_only=True)
-    #doctor_data = PatientSerializer(source="assigned_to", read_only=True)
     logged_by = serializers.PrimaryKeyRelatedField(read_only=True)
-    #assigned_to = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     approved = serializers.BooleanField(read_only=True)
 
     class Meta:
         model = Appointment
-        exclude = ("patient","assigned_to")
+        exclude = ("patient", "assigned_to")
 
     def validate(self, attrs):
         if self.instance:  # If update
@@ -85,4 +82,3 @@ class PatientAppointmentSerializer(serializers.ModelSerializer):
         validated_data["logged_by"] = request.user
         validated_data["patient"] = Patient.objects.get(user=request.user)
         return super().create(validated_data)
-
