@@ -1,5 +1,7 @@
 from rest_framework import viewsets, filters
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from authentication.permissions import DoctorPermission, PatientPermission
 from rest_framework.response import Response
 from django.http import Http404
 from .serializers import *
@@ -13,6 +15,7 @@ class MedicalExamViewSet(viewsets.ModelViewSet):
 
     queryset = MedicalExam.objects.all()
     serializer_class = MedicalExamSerializer
+    permission_classes = [IsAuthenticated, DoctorPermission]
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
@@ -28,6 +31,7 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
     queryset = MedicalRecord.objects.all()
     serializer_class = MedicalRecordSerializer
     filter_backends = (filters.SearchFilter,)
+    permission_classes = [IsAuthenticated, DoctorPermission]
     search_fields = [
         "patient__user__first_name",
         "patient__user__last_name",
@@ -45,6 +49,8 @@ class PatientMedicalRecordAPIView(APIView):
     """
     Retrieve The medical record for the Patient requesting it
     """
+
+    permission_classes = [IsAuthenticated, PatientPermission]
 
     def get_object(self, patient):
         try:

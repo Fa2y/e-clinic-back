@@ -1,9 +1,14 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, status
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from .serializers import AppointmentSerializer, PatientAppointmentSerializer
 from .models import Appointment
 from authentication.models import Patient
 from authentication.permissions import DoctorPermission, PatientPermission
+from rest_framework.decorators import action
+from rest_framework.exceptions import ParseError, NotFound
+import json
 
 
 class DoctorAppointmentViewSet(viewsets.ModelViewSet):
@@ -13,7 +18,28 @@ class DoctorAppointmentViewSet(viewsets.ModelViewSet):
 
     serializer_class = AppointmentSerializer
     queryset = Appointment.objects.all()
-    permission_classes = [DoctorPermission]
+    permission_classes = [IsAuthenticated, DoctorPermission]
+
+    @action(detail=False, methods=["patch"])
+    def approve(self, request):
+        """
+        Approve Multiple Appointments
+        """
+        try:
+            data = json.loads(request.body)
+            print(repr(data))
+            for aid in data.get("aids", []):
+                appointment = Appointment.objects.get(pk=aid)
+                appointment.approved = True
+                appointment.save()
+            return Response(
+                {"details": "Appointments approved successfully"},
+                status=status.HTTP_202_ACCEPTED,
+            )
+        except Appointment.DoesNotExist:
+            raise NotFound()
+        except Exception:
+            raise ParseError()
 
 
 class PatientAppointmentViewSet(viewsets.ModelViewSet):
@@ -23,7 +49,7 @@ class PatientAppointmentViewSet(viewsets.ModelViewSet):
 
     serializer_class = PatientAppointmentSerializer
     queryset = Appointment.objects.all()
-    permission_classes = [PatientPermission]
+    permission_classes = [IsAuthenticated, PatientPermission]
 
     def get_queryset(self):
         user = self.request.user

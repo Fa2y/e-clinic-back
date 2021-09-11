@@ -38,12 +38,11 @@ class AppointmentSerializer(serializers.ModelSerializer):
     """
 
     patient_data = PatientSerializer(source="patient", read_only=True)
-    doctor_data = PatientSerializer(source="assigned_to", read_only=True)
-    patient = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Patient.objects.all()
+    patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
+    logged_by = UserSerializer(read_only=True)
+    assigned_to = serializers.PrimaryKeyRelatedField(
+        queryset=User.objects.all(), required=False
     )
-    logged_by = serializers.PrimaryKeyRelatedField(read_only=True)
-    assigned_to = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
 
     class Meta:
         model = Appointment
@@ -52,7 +51,8 @@ class AppointmentSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         validated_data["approved"] = True
         request = self.context["request"]
-        validated_data["logged_by"] = request.user.pk
+        validated_data["logged_by"] = request.user
+        validated_data["assigned_to"] = request.user
         return super().create(validated_data)
 
 

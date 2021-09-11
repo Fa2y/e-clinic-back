@@ -49,6 +49,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "34y3f046fie3ceipkd9xb6idxfap06bw",
+  "fields": {
+    "session_data": ".eJxVjE0OgjAQRu_StSVt6Uxbd3oRMswMgUggEVgZ7y4YFrr8ft57mYa2tW-2RZ_NIOZqHBKTp2iZWWxMmW120tnoQ-2gRkyq5vKLtcQPnQ6WxvGoK2Ket2mtvp9zXqrbnnRaB6Z1mKf7Sf2pelr63ZOBakmCCK0PBUssmlx0ue46DdgJa-uBFNBlKEUixJIJQiFJrfiE5v0BNapFRQ:1mNKFl:Mtk58oEVGU8ds0LAGFw7MJaepLvNW_DoVLOdQrIKIW8",
+    "expire_date": "2021-09-20T19:26:01.054Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "468wljwcmr2fpownboss03dr53blql8a",
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIGD2:ahTrNp6rNgOrlkxrIgbPRMqXkSuNvwtDm4uTq7NDdxs",
@@ -77,6 +85,14 @@
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIFrg:I3oL_pRLSIzEVWBTV_LnMQ4Kk0JYfhgrnigXOdAK2a4",
     "expire_date": "2021-09-06T19:44:12.566Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6ama7m64bd3p99dwuuohjo4a9ms8nxq9",
+  "fields": {
+    "session_data": ".eJxVjE0OgjAQRu_StSVt6Uxbd3oRMswMgUggEVgZ7y4YFrr8ft57mYa2tW-2RZ_NIOZqHBKTp2iZWWxMmW120tnoQ-2gRkyq5vKLtcQPnQ6WxvGoK2Ket2mtvp9zXqrbnnRaB6Z1mKf7Sf2pelr63ZOBakmCCK0PBUssmlx0ue46DdgJa-uBFNBlKEUixJIJQiFJrfiE5v0BNapFRQ:1mP03B:aF8LqOrdatDAAM6NhJklWxFk3_ejHtnhtrhHYLDhU6g",
+    "expire_date": "2021-09-25T10:15:57.310Z"
   }
 },
 {
@@ -305,6 +321,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "k2rvsq1lf030iivfyza89ki1x5xstidl",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-layHTdkqn7vRHyPQxgUggkbIy_rtgWOjuvs59qZ63OvTbWp79mNVVJRONIOsmaKAGtdlVh74RYz1ZwZyMUZdfLHJ6lPlgeZqOuOWUlm2u7Xdz1mt7212Z65i4jst8P6m_q4HXYf-RAM4DQ7BCEASdi8IOOg2xBIk2hMiYwFNGLERiMWdywSXRxZEr6v0BkB9EtA:1mNKHd:NRSFakY67Pq-_CnbewYKr_olZtgvnWY0tDM2sMlGx_0",
+    "expire_date": "2021-09-20T19:27:57.421Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "kcz13auwo9w50lgzyhhtbh4jtmr3sifo",
   "fields": {
     "session_data": ".eJxVjk0OgjAQhe_StZA2zJTWnV6EzHSmgUhqImVlvLtAWOjy_Xwv720GWus4rIu-hknM1eToBUGg6QW0ARTXsFdpHBP7LUugai6_GFN6aNlZmufdbiml51pqe3TOeGlvm9JSp0R1epb7Sf1NjbSMxweLvSUbuxxszIDImdB6Z1lj5i5GJki2DwKgIeQORAJGTNkpBlTz-QKj0UZG:1mIXck:J_yiYAd1qhdPuyQYmcY1d6p_RKf0uGUJU7tCI6Ovmbc",
@@ -405,6 +429,14 @@
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIV4c:jwi_u3rruL1gpiPTNlEh0DCns2wEbPr_GyiGpmfZlpU",
     "expire_date": "2021-09-07T11:58:34.150Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uxyr4pp7cn4w40j0pwuuifg9mjs9x3xu",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-layHTdkqn7vRHyPQxgUggkbIy_rtgWOjuvs59qZ63OvTbWp79mNVVJRONIOsmaKAGtdlVh74RYz1ZwZyMUZdfLHJ6lPlgeZqOuOWUlm2u7Xdz1mt7212Z65i4jst8P6m_q4HXYf-RAM4DQ7BCEASdi8IOOg2xBIk2hMiYwFNGLERiMWdywSXRxZEr6v0BkB9EtA:1mP03c:_JDwMqVYwASP1akDcW-T3h21onB_yUnkNQEMATEoIKA",
+    "expire_date": "2021-09-25T10:16:24.323Z"
   }
 },
 {
@@ -513,26 +545,26 @@
 {
   "model": "authentication.user",
   "fields": {
-    "password": "pbkdf2_sha256$260000$YRxEhWMzVHkKeptzd5lWQ7$lt1YueVix7SIxZd4//sQyMA3yQfewEXwohcCWty4MKE=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Ahmed",
-    "last_name": "Yasser",
-    "is_staff": false,
+    "password": "pbkdf2_sha256$260000$rAl0UFMTRCyyPDV71XJ2OP$98TqvSUkcgpkb8Z0Z/RUri67OlNf4PwUYU3W/svIdUQ=",
+    "last_login": "2021-09-11T10:15:57.303Z",
+    "is_superuser": true,
+    "first_name": "Admin First Name",
+    "last_name": "Admin Last Name",
+    "is_staff": true,
     "is_active": true,
-    "date_joined": "2021-07-18T01:37:41.164Z",
+    "date_joined": "2021-06-29T18:53:17Z",
     "deleted": null,
-    "username": null,
+    "username": "admin",
     "sex": "Male",
-    "email": "fakeEmail123@esi-sba.dz",
-    "role": "Patient",
+    "email": "e-clinic@esi-sba.dz",
+    "role": "GRH",
     "image": "",
-    "phone": "+213123123123",
-    "date_of_birth": "2021-07-18",
+    "phone": "",
+    "date_of_birth": "2021-06-29",
     "city": "",
     "address": "",
     "is_confirmed": false,
-    "created_on": "2021-07-18T01:37:41.165Z",
+    "created_on": "2021-06-29T18:53:17.837Z",
     "groups": [],
     "user_permissions": []
   }
@@ -540,18 +572,18 @@
 {
   "model": "authentication.user",
   "fields": {
-    "password": "pbkdf2_sha256$260000$qWw2442nxHB2ZtG2BYvzJe$6RiFw2dr7z/IPUVg10aToEUab82CTVzZGObhNKdPLlA=",
+    "password": "pbkdf2_sha256$260000$Hgak4OYTbXoB54lMuzaLbV$ENFzPejF7MlTtf+wG2o4rRiK8ERaEgjxh815bnpBLpw=",
     "last_login": null,
     "is_superuser": false,
     "first_name": "Seyf Eddine",
     "last_name": "Hasnaoui",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2021-08-05T11:45:13.481Z",
+    "date_joined": "2021-08-05T11:42:47.447Z",
     "deleted": null,
     "username": null,
     "sex": "Male",
-    "email": "fake.email123@esi-sba.dz",
+    "email": "fake.email69@esi-sba.dz",
     "role": "Patient",
     "image": "",
     "phone": "+2135566333",
@@ -559,88 +591,7 @@
     "city": "32",
     "address": "Telmcen Centre",
     "is_confirmed": false,
-    "created_on": "2021-08-05T11:45:13.482Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "authentication.user",
-  "fields": {
-    "password": "pbkdf2_sha256$260000$LhAoQ8oD3kngd4x4D3oDAC$qne2XUF65k2QlPKlq+sH41uJ9rbEgZU5ErXtl9p6DD4=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Iskander",
-    "last_name": "Zellagui",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-14T20:31:29.605Z",
-    "deleted": null,
-    "username": null,
-    "sex": "Male",
-    "email": "fake.email4@esi-sba.dz",
-    "role": "Patient",
-    "image": "",
-    "phone": "+21355661111",
-    "date_of_birth": "2021-07-14",
-    "city": "20",
-    "address": "Setif Centre",
-    "is_confirmed": false,
-    "created_on": "2021-07-14T20:31:29.605Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "authentication.user",
-  "fields": {
-    "password": "pbkdf2_sha256$260000$Nzk2FS1izAEa50NL6eNcdS$9Ouf6NaBVH9ZA7NXS0SN3pRFgE/GoO6bxTGo1EDaO9o=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Aymen",
-    "last_name": "Djebbar",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-14T20:29:14.172Z",
-    "deleted": null,
-    "username": null,
-    "sex": "Male",
-    "email": "fake.email@esi-sba.dz",
-    "role": "Patient",
-    "image": "",
-    "phone": "+21355667477",
-    "date_of_birth": "2021-07-14",
-    "city": "32",
-    "address": "Baydh Centre",
-    "is_confirmed": false,
-    "created_on": "2021-07-14T20:29:14.172Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "authentication.user",
-  "fields": {
-    "password": "pbkdf2_sha256$260000$gMk8DFEgJlkh9XciSjuMV3$/zmk59D3hdbjE3l73bRZ0pKP8g84poI4c2LhfIIby8k=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Ahmed",
-    "last_name": "Yasser",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-23T22:47:28.964Z",
-    "deleted": null,
-    "username": null,
-    "sex": "Male",
-    "email": "fakeEmail12344@esi-sba.dz",
-    "role": "Patient",
-    "image": "",
-    "phone": "+213123123123",
-    "date_of_birth": "2021-07-23",
-    "city": "",
-    "address": "",
-    "is_confirmed": false,
-    "created_on": "2021-07-23T22:47:28.964Z",
+    "created_on": "2021-08-05T11:42:47.447Z",
     "groups": [],
     "user_permissions": []
   }
@@ -668,60 +619,6 @@
     "address": "Telmcen Centre",
     "is_confirmed": false,
     "created_on": "2021-08-05T11:27:23.756Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "authentication.user",
-  "fields": {
-    "password": "pbkdf2_sha256$260000$gAIbsHB7zB3SCjFuL0cgv8$4UjjQZ12sRiKzBkhT6vLlJw0GphzaE35FrVXqJYUX5s=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Houssem Eddine",
-    "last_name": "Benmamer",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-14T20:30:32.920Z",
-    "deleted": null,
-    "username": null,
-    "sex": "Male",
-    "email": "fake.email3@esi-sba.dz",
-    "role": "Patient",
-    "image": "",
-    "phone": "+2135566333",
-    "date_of_birth": "2021-07-14",
-    "city": "32",
-    "address": "Bayadh Centre",
-    "is_confirmed": false,
-    "created_on": "2021-07-14T20:30:32.920Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "authentication.user",
-  "fields": {
-    "password": "pbkdf2_sha256$260000$5zF5ZNJczXcKu3XtLkUwAf$EydKlE56KMFKzvSlrf+f0SEmb083zgdEm6dtZxBCTyY=",
-    "last_login": "2021-08-24T12:23:18Z",
-    "is_superuser": false,
-    "first_name": "Ahmed Yasser",
-    "last_name": "Merzouk Benselloua",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-01T18:41:41Z",
-    "deleted": null,
-    "username": "fa2y",
-    "sex": "Male",
-    "email": "a.merzoukbenselloua@esi-sba.dz",
-    "role": "Patient",
-    "image": "",
-    "phone": "+21355667477",
-    "date_of_birth": "2000-01-01",
-    "city": "27",
-    "address": "Mostaganem Centre",
-    "is_confirmed": false,
-    "created_on": "2021-07-01T18:41:41.147Z",
     "groups": [],
     "user_permissions": []
   }
@@ -810,26 +707,26 @@
 {
   "model": "authentication.user",
   "fields": {
-    "password": "pbkdf2_sha256$260000$Hgak4OYTbXoB54lMuzaLbV$ENFzPejF7MlTtf+wG2o4rRiK8ERaEgjxh815bnpBLpw=",
+    "password": "pbkdf2_sha256$260000$LhAoQ8oD3kngd4x4D3oDAC$qne2XUF65k2QlPKlq+sH41uJ9rbEgZU5ErXtl9p6DD4=",
     "last_login": null,
     "is_superuser": false,
-    "first_name": "Seyf Eddine",
-    "last_name": "Hasnaoui",
+    "first_name": "Iskander",
+    "last_name": "Zellagui",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2021-08-05T11:42:47.447Z",
+    "date_joined": "2021-07-14T20:31:29.605Z",
     "deleted": null,
     "username": null,
     "sex": "Male",
-    "email": "fake.email69@esi-sba.dz",
+    "email": "fake.email4@esi-sba.dz",
     "role": "Patient",
     "image": "",
-    "phone": "+2135566333",
-    "date_of_birth": "2021-08-05",
-    "city": "32",
-    "address": "Telmcen Centre",
+    "phone": "+21355661111",
+    "date_of_birth": "2021-07-14",
+    "city": "20",
+    "address": "Setif Centre",
     "is_confirmed": false,
-    "created_on": "2021-08-05T11:42:47.447Z",
+    "created_on": "2021-07-14T20:31:29.605Z",
     "groups": [],
     "user_permissions": []
   }
@@ -837,26 +734,134 @@
 {
   "model": "authentication.user",
   "fields": {
-    "password": "pbkdf2_sha256$260000$rAl0UFMTRCyyPDV71XJ2OP$98TqvSUkcgpkb8Z0Z/RUri67OlNf4PwUYU3W/svIdUQ=",
-    "last_login": "2021-08-24T16:53:06.990Z",
-    "is_superuser": true,
-    "first_name": "Admin First Name",
-    "last_name": "Admin Last Name",
-    "is_staff": true,
+    "password": "pbkdf2_sha256$260000$Nzk2FS1izAEa50NL6eNcdS$9Ouf6NaBVH9ZA7NXS0SN3pRFgE/GoO6bxTGo1EDaO9o=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Aymen",
+    "last_name": "Djebbar",
+    "is_staff": false,
     "is_active": true,
-    "date_joined": "2021-06-29T18:53:17Z",
+    "date_joined": "2021-07-14T20:29:14.172Z",
     "deleted": null,
-    "username": "admin",
+    "username": null,
     "sex": "Male",
-    "email": "e-clinic@esi-sba.dz",
-    "role": "GRH",
+    "email": "fake.email@esi-sba.dz",
+    "role": "Patient",
     "image": "",
-    "phone": "",
-    "date_of_birth": "2021-06-29",
+    "phone": "+21355667477",
+    "date_of_birth": "2021-07-14",
+    "city": "32",
+    "address": "Baydh Centre",
+    "is_confirmed": false,
+    "created_on": "2021-07-14T20:29:14.172Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$YRxEhWMzVHkKeptzd5lWQ7$lt1YueVix7SIxZd4//sQyMA3yQfewEXwohcCWty4MKE=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Ahmed",
+    "last_name": "Yasser",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-07-18T01:37:41.164Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fakeEmail123@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+213123123123",
+    "date_of_birth": "2021-07-18",
     "city": "",
     "address": "",
     "is_confirmed": false,
-    "created_on": "2021-06-29T18:53:17.837Z",
+    "created_on": "2021-07-18T01:37:41.165Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$5zF5ZNJczXcKu3XtLkUwAf$EydKlE56KMFKzvSlrf+f0SEmb083zgdEm6dtZxBCTyY=",
+    "last_login": "2021-08-24T12:23:18Z",
+    "is_superuser": false,
+    "first_name": "Ahmed Yasser",
+    "last_name": "Merzouk Benselloua",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-07-01T18:41:41Z",
+    "deleted": null,
+    "username": "fa2y",
+    "sex": "Male",
+    "email": "a.merzoukbenselloua@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+21355667477",
+    "date_of_birth": "2000-01-01",
+    "city": "27",
+    "address": "Mostaganem Centre",
+    "is_confirmed": false,
+    "created_on": "2021-07-01T18:41:41.147Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$gAIbsHB7zB3SCjFuL0cgv8$4UjjQZ12sRiKzBkhT6vLlJw0GphzaE35FrVXqJYUX5s=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Houssem Eddine",
+    "last_name": "Benmamer",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-07-14T20:30:32.920Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fake.email3@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+2135566333",
+    "date_of_birth": "2021-07-14",
+    "city": "32",
+    "address": "Bayadh Centre",
+    "is_confirmed": false,
+    "created_on": "2021-07-14T20:30:32.920Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$qWw2442nxHB2ZtG2BYvzJe$6RiFw2dr7z/IPUVg10aToEUab82CTVzZGObhNKdPLlA=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Seyf Eddine",
+    "last_name": "Hasnaoui",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-05T11:45:13.481Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fake.email123@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+2135566333",
+    "date_of_birth": "2021-08-05",
+    "city": "32",
+    "address": "Telmcen Centre",
+    "is_confirmed": false,
+    "created_on": "2021-08-05T11:45:13.482Z",
     "groups": [],
     "user_permissions": []
   }
@@ -865,7 +870,7 @@
   "model": "authentication.user",
   "fields": {
     "password": "pbkdf2_sha256$260000$4arkKrNtj5SAjE0CUku8j5$H46f6itnDRZbY1LBEWqsCD4MUm5ettBBo797xJnQsDc=",
-    "last_login": "2021-08-24T17:04:46.203Z",
+    "last_login": "2021-09-11T10:16:24.312Z",
     "is_superuser": true,
     "first_name": "Dr Ahmed",
     "last_name": "Yasser",
@@ -884,6 +889,33 @@
     "address": "",
     "is_confirmed": true,
     "created_on": "2021-08-17T00:08:46.039Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "authentication.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$gMk8DFEgJlkh9XciSjuMV3$/zmk59D3hdbjE3l73bRZ0pKP8g84poI4c2LhfIIby8k=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Ahmed",
+    "last_name": "Yasser",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-07-23T22:47:28.964Z",
+    "deleted": null,
+    "username": null,
+    "sex": "Male",
+    "email": "fakeEmail12344@esi-sba.dz",
+    "role": "Patient",
+    "image": "",
+    "phone": "+213123123123",
+    "date_of_birth": "2021-07-23",
+    "city": "",
+    "address": "",
+    "is_confirmed": false,
+    "created_on": "2021-07-23T22:47:28.964Z",
     "groups": [],
     "user_permissions": []
   }
@@ -1141,6 +1173,111 @@
     "orientation_specialist": "",
     "orientation_cause": "notice",
     "orientation_response": ""
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "patient": "86e4fc97-3299-431f-b71e-6687a5ac4106",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Annual Check",
+    "date": "2021-09-14T12:00:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-06T23:10:09.725Z",
+    "updated_at": "2021-09-06T23:10:09.725Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "patient": "86002cef-bc64-4668-9c56-39800f82dd33",
+    "logged_by": [
+      "fake.email4@esi-sba.dz"
+    ],
+    "description": "I have a fever, and vomiting.",
+    "date": "2021-09-08T12:00:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-06T23:10:56.973Z",
+    "updated_at": "2021-09-11T14:41:09.119Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "patient": "b542abe1-6a5e-4c1c-8558-5e02a5933746",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Appointment for Covid-19 checkup,(appointment Change)",
+    "date": "2021-09-09T10:00:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-08T00:19:30.676Z",
+    "updated_at": "2021-09-11T12:26:27.387Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Appointment re-check on patient state since last checkup",
+    "date": "2021-09-20T15:00:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-08T00:21:29.135Z",
+    "updated_at": "2021-09-08T00:21:29.135Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 5,
+  "fields": {
+    "deleted": null,
+    "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Diarrhea and stomach ache",
+    "date": "2021-09-02T15:30:00Z",
+    "comment": "I am sorry i am not available that day, you request another appointment when you'll be available.",
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-11T10:18:56.373Z",
+    "updated_at": "2021-09-11T13:52:15.037Z",
+    "status": "cancelled",
+    "approved": true
   }
 },
 {
@@ -1735,6 +1872,96 @@
     "object_repr": "MedicalRecord-for the patient:66-Benmamer Houssem Eddine",
     "action_flag": 2,
     "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2021-09-06T21:48:30.248Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "authentication",
+      "user"
+    ],
+    "object_id": "c2b2f4a1-9108-4121-9647-f23783f4dc22",
+    "object_repr": "c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2021-09-06T23:10:09.726Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "1",
+    "object_repr": "for Patient-Student-Yasser Ahmed by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2021-09-06T23:10:56.975Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "2",
+    "object_repr": "for Patient-Student-Zellagui Iskander by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2021-09-11T13:41:40.657Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "5",
+    "object_repr": "for Patient-Student-Djebbar Aymen by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2021-09-11T13:49:40.606Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "5",
+    "object_repr": "for Patient-Student-Djebbar Aymen by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
   }
 }
 ]
