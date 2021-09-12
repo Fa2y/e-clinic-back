@@ -1033,48 +1033,46 @@
   "pk": 1,
   "fields": {
     "deleted": null,
-    "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
-    "social_number": 22,
-    "biometric": "23",
-    "tobaco_consumption": false,
-    "tobaco_taken_as": "chewing tobaco",
-    "number_units": 22,
-    "alcohol_consumption": true,
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "smoking": false,
+    "chewing": false,
+    "injection": false,
+    "oldSmoker": false,
+    "alcohol": false,
     "medication_consumption": false,
-    "medications": "no",
-    "other": "",
-    "general_diseases": "diabett",
-    "surgical_intervention": "zzz",
-    "congenital_condition": "aaa",
-    "allergic_reaction": "aaa",
-    "screening": null,
-    "wieght": "75.000000",
-    "height": "180.000000",
-    "hearing_right": "",
-    "hearing_left": "",
-    "visual_acuity_with_correction_left": "",
-    "visual_acuity_with_correction_right": "",
-    "visual_acuity_without_correction_left": "",
-    "visual_acuity_without_correction_right": " ",
+    "smokingNumberUnits": 12,
+    "chewingNumberUnits": 0,
+    "injectionNumbernits": 0,
+    "ageFc": "15",
+    "duration": "12",
+    "medication": "",
+    "familySituation": "married",
+    "bloodType": "O+",
+    "social_number": "1234567899",
+    "wieght": "90",
+    "height": "180",
+    "hearing_right": "10",
+    "hearing_left": "10",
+    "visual_acuity_with_correction_left": "10",
+    "visual_acuity_with_correction_right": "10",
+    "visual_acuity_without_correction_left": "9.5",
+    "visual_acuity_without_correction_right": "9.25",
     "skin_state": "",
     "skin_exam": "",
     "ophtalmological_state": "",
     "ophtalmological_exam": "",
-    "orl_state": "",
-    "orl_exam": "",
-    "locomotor_case": "",
-    "locomotor_exam": "",
     "respiratory_state": "",
     "respiratory_exam": "",
     "cardiovascular_state": "",
     "cardiovascular_exam": "",
     "digestive_state": "",
     "digestive_exam": "",
-    "aptitude": false,
+    "aptitude": "",
     "reason": "",
-    "orientation_specialist": "",
-    "orientation_cause": "notice",
-    "orientation_response": ""
+    "orl_state": "",
+    "orl_exam": "",
+    "locomotor_case": "",
+    "locomotor_exam": ""
   }
 },
 {
@@ -1082,72 +1080,24 @@
   "pk": 2,
   "fields": {
     "deleted": null,
-    "patient": "ba8b1d92-eda7-406e-aabf-6c0f9c44e74a",
-    "social_number": 102,
-    "biometric": "66",
-    "tobaco_consumption": true,
-    "tobaco_taken_as": "injection tobaco",
-    "number_units": 2,
-    "alcohol_consumption": true,
-    "medication_consumption": true,
-    "medications": "no",
-    "other": "",
-    "general_diseases": "diabett",
-    "surgical_intervention": "no",
-    "congenital_condition": "yes",
-    "allergic_reaction": "no",
-    "screening": null,
-    "wieght": "75.000000",
-    "height": "180.000000",
-    "hearing_right": "",
-    "hearing_left": "",
-    "visual_acuity_with_correction_left": "",
-    "visual_acuity_with_correction_right": "",
-    "visual_acuity_without_correction_left": "",
-    "visual_acuity_without_correction_right": "",
-    "skin_state": "",
-    "skin_exam": "",
-    "ophtalmological_state": "",
-    "ophtalmological_exam": "",
-    "orl_state": "",
-    "orl_exam": "",
-    "locomotor_case": "",
-    "locomotor_exam": "",
-    "respiratory_state": "",
-    "respiratory_exam": "",
-    "cardiovascular_state": "",
-    "cardiovascular_exam": "",
-    "digestive_state": "",
-    "digestive_exam": "",
-    "aptitude": false,
-    "reason": "",
-    "orientation_specialist": "",
-    "orientation_cause": "notice",
-    "orientation_response": ""
-  }
-},
-{
-  "model": "medical.medicalrecord",
-  "pk": 3,
-  "fields": {
-    "deleted": null,
-    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
-    "social_number": 123456789,
-    "biometric": "1234567891",
-    "tobaco_consumption": true,
-    "tobaco_taken_as": "smoking tobaco",
-    "number_units": 3,
-    "alcohol_consumption": true,
-    "medication_consumption": true,
-    "medications": "Sulpiride",
-    "other": "",
-    "general_diseases": "",
-    "surgical_intervention": "",
-    "congenital_condition": "",
-    "allergic_reaction": "",
-    "screening": null,
-    "wieght": "90.000000",
-    "height": "180.000000",
+    "patient": "b542abe1-6a5e-4c1c-8558-5e02a5933746",
+    "smoking": false,
+    "chewing": false,
+    "injection": false,
+    "oldSmoker": false,
+    "alcohol": false,
+    "medication_consumption": false,
+    "smokingNumberUnits": 2,
+    "chewingNumberUnits": 0,
+    "injectionNumbernits": 0,
+    "ageFc": "12",
+    "duration": "12",
+    "medication": "",
+    "familySituation": "single",
+    "bloodType": "B-",
+    "social_number": "1234567899",
+    "wieght": "75",
+    "height": "180",
     "hearing_right": "10",
     "hearing_left": "10",
     "visual_acuity_with_correction_left": "10",
@@ -1158,21 +1108,18 @@
     "skin_exam": "",
     "ophtalmological_state": "eye spots",
     "ophtalmological_exam": "",
-    "orl_state": "whistling",
-    "orl_exam": "",
-    "locomotor_case": "muscular",
-    "locomotor_exam": "",
-    "respiratory_state": "chest pain",
+    "respiratory_state": "cough",
     "respiratory_exam": "",
-    "cardiovascular_state": "palpitations",
+    "cardiovascular_state": "",
     "cardiovascular_exam": "",
-    "digestive_state": "stool,abdominal pain",
+    "digestive_state": "",
     "digestive_exam": "",
-    "aptitude": true,
+    "aptitude": "",
     "reason": "",
-    "orientation_specialist": "",
-    "orientation_cause": "notice",
-    "orientation_response": ""
+    "orl_state": "",
+    "orl_exam": "",
+    "locomotor_case": "articular",
+    "locomotor_exam": "At random times"
   }
 },
 {
@@ -1228,13 +1175,13 @@
     ],
     "description": "Appointment for Covid-19 checkup,(appointment Change)",
     "date": "2021-09-09T10:00:00Z",
-    "comment": null,
+    "comment": "I am not available",
     "assigned_to": [
       "ahmed.mer2000@esi-sba.dz"
     ],
     "logged_at": "2021-09-08T00:19:30.676Z",
-    "updated_at": "2021-09-11T12:26:27.387Z",
-    "status": "new",
+    "updated_at": "2021-09-11T18:22:55.890Z",
+    "status": "cancelled",
     "approved": true
   }
 },
@@ -1247,14 +1194,14 @@
     "logged_by": [
       "ahmed.mer2000@esi-sba.dz"
     ],
-    "description": "Appointment re-check on patient state since last checkup",
-    "date": "2021-09-20T15:00:00Z",
+    "description": "Appointment re-check on patient state since last checkup. Changed",
+    "date": "2021-09-22T17:00:00Z",
     "comment": null,
     "assigned_to": [
       "ahmed.mer2000@esi-sba.dz"
     ],
     "logged_at": "2021-09-08T00:21:29.135Z",
-    "updated_at": "2021-09-08T00:21:29.135Z",
+    "updated_at": "2021-09-11T18:21:19.437Z",
     "status": "new",
     "approved": true
   }
@@ -1275,8 +1222,29 @@
       "ahmed.mer2000@esi-sba.dz"
     ],
     "logged_at": "2021-09-11T10:18:56.373Z",
-    "updated_at": "2021-09-11T13:52:15.037Z",
-    "status": "cancelled",
+    "updated_at": "2021-09-11T18:24:07.691Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 6,
+  "fields": {
+    "deleted": null,
+    "patient": "27ad6d22-73de-4cf0-839f-3929a04ab3a8",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Annual Check",
+    "date": "2021-09-13T11:30:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-11T18:19:42.128Z",
+    "updated_at": "2021-09-11T18:19:42.128Z",
+    "status": "new",
     "approved": true
   }
 },
@@ -1962,6 +1930,150 @@
     "object_repr": "for Patient-Student-Djebbar Aymen by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2021-09-11T17:24:26.103Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "3",
+    "object_repr": "MedicalRecord-for the patient:3-a25d81ef451341bbbf05fe90e54d3d39",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2021-09-11T17:24:26.116Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "2",
+    "object_repr": "MedicalRecord-for the patient:2-ba8b1d92eda7406eaabf6c0f9c44e74a",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2021-09-11T17:24:26.126Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "1",
+    "object_repr": "MedicalRecord-for the patient:1-ea50ac55ef4e43d3b75336a86db7b17d",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2021-09-11T17:42:41.619Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "5",
+    "object_repr": "MedicalRecord-for the patient:5-Patient-Student-Zellagui Iskander",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2021-09-11T17:48:28.893Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "7",
+    "object_repr": "MedicalRecord-for the patient:7-Patient-Student-Merzouk Benselloua Ahmed Yasser",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2021-09-11T17:48:28.907Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "6",
+    "object_repr": "MedicalRecord-for the patient:6-Patient-Student-Zellagui Iskander",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2021-09-11T17:48:28.913Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalrecord"
+    ],
+    "object_id": "4",
+    "object_repr": "MedicalRecord-for the patient:4-Patient-Student-Hasnaoui Seyf Eddine",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2021-09-11T18:23:47.128Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "5",
+    "object_repr": "for Patient-Student-Djebbar Aymen by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Approved\"]}}]"
   }
 }
 ]
