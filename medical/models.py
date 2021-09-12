@@ -13,7 +13,8 @@ def validate_file_extension(value):
     from django.core.exceptions import ValidationError
 
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
-    valid_extensions = [".pdf", ".doc", ".docx", ".jpg", ".png", ".xlsx", ".xls"]
+    valid_extensions = [".pdf", ".doc", ".docx",
+                        ".jpg", ".png", ".xlsx", ".xls"]
     if not ext.lower() in valid_extensions:
         raise ValidationError("Unsupported file extension.")
 
@@ -87,7 +88,8 @@ class MedicalRecord(SafeDeleteModel):
     injection = models.BooleanField(default=False, blank=True, null=True)
     oldSmoker = models.BooleanField(default=False, blank=True, null=True)
     alcohol = models.BooleanField(default=False, blank=True, null=True)
-    medication_consumption = models.BooleanField(default=False, blank=True, null=True)
+    medication_consumption = models.BooleanField(
+        default=False, blank=True, null=True)
 
     smokingNumberUnits = models.IntegerField(default=0, blank=True, null=True)
     chewingNumberUnits = models.IntegerField(default=0, blank=True, null=True)
@@ -117,15 +119,19 @@ class MedicalRecord(SafeDeleteModel):
     )
     skin_state = models.CharField(max_length=200, blank=True, null=True)
     skin_exam = models.CharField(max_length=200, blank=True, null=True)
-    ophtalmological_state = models.CharField(max_length=200, blank=True, null=True)
-    ophtalmological_exam = models.CharField(max_length=200, blank=True, null=True)
+    ophtalmological_state = models.CharField(
+        max_length=200, blank=True, null=True)
+    ophtalmological_exam = models.CharField(
+        max_length=200, blank=True, null=True)
     respiratory_state = models.CharField(max_length=200, blank=True, null=True)
     respiratory_exam = models.CharField(max_length=200, blank=True, null=True)
-    cardiovascular_state = models.CharField(max_length=200, blank=True, null=True)
-    cardiovascular_exam = models.CharField(max_length=200, blank=True, null=True)
+    cardiovascular_state = models.CharField(
+        max_length=200, blank=True, null=True)
+    cardiovascular_exam = models.CharField(
+        max_length=200, blank=True, null=True)
     digestive_state = models.CharField(max_length=200, blank=True, null=True)
     digestive_exam = models.CharField(max_length=200, blank=True, null=True)
-    aptitude = models.CharField(max_length=200, blank=True, null=True)
+    aptitude = models.BooleanField(default=False)
     reason = models.CharField(max_length=200, blank=True, null=True)
     orl_state = models.CharField(max_length=200, blank=True, null=True)
     orl_exam = models.CharField(max_length=200, blank=True, null=True)
