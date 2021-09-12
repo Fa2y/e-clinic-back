@@ -82,126 +82,55 @@ class MedicalRecord(SafeDeleteModel):
 
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, unique=True)
 
-    social_number = models.BigIntegerField(unique=True)
-    biometric = models.CharField(max_length=200, unique=True)
+    smoking = models.BooleanField(default=False, blank=True, null=True)
+    chewing = models.BooleanField(default=False, blank=True, null=True)
+    injection = models.BooleanField(default=False, blank=True, null=True)
+    oldSmoker = models.BooleanField(default=False, blank=True, null=True)
+    alcohol = models.BooleanField(default=False, blank=True, null=True)
+    medication_consumption = models.BooleanField(default=False, blank=True, null=True)
 
-    tobaco_consumption = models.BooleanField(default=False)
-    PRODUCT = [
-        ("smoking tobaco", "smoking tobaco"),
-        ("chewing tobaco", "chewing tobaco"),
-        ("injection tobaco", "injection tobaco"),
-    ]
+    smokingNumberUnits = models.IntegerField(default=0, blank=True, null=True)
+    chewingNumberUnits = models.IntegerField(default=0, blank=True, null=True)
+    injectionNumbernits = models.IntegerField(default=0, blank=True, null=True)
 
-    tobaco_taken_as = models.CharField(max_length=50, choices=PRODUCT, blank=True)
-    number_units = models.IntegerField(max_length=2, blank=True, null=True)
-
-    alcohol_consumption = models.BooleanField(default=False)
-
-    medication_consumption = models.BooleanField(default=False)
-    medications = models.TextField(blank=True)
-
-    other = models.TextField(blank=True)
-
-    general_diseases = models.TextField(blank=True)
-    surgical_intervention = models.TextField(blank=True)
-    congenital_condition = models.TextField(blank=True)
-    allergic_reaction = models.TextField(blank=True)
-
-    # every medical record can include many medical exams
-    screening = models.ForeignKey(
-        MedicalExam, blank=True, null=True, on_delete=models.CASCADE
+    ageFc = models.CharField(max_length=200, blank=True, null=True)
+    duration = models.CharField(max_length=200, blank=True, null=True)
+    medication = models.CharField(max_length=200, blank=True, null=True)
+    familySituation = models.CharField(max_length=200, blank=True, null=True)
+    bloodType = models.CharField(max_length=200, blank=True, null=True)
+    social_number = models.CharField(max_length=200, blank=True, null=True)
+    wieght = models.CharField(max_length=200, blank=True, null=True)
+    height = models.CharField(max_length=200, blank=True, null=True)
+    hearing_right = models.CharField(max_length=200, blank=True, null=True)
+    hearing_left = models.CharField(max_length=200, blank=True, null=True)
+    visual_acuity_with_correction_left = models.CharField(
+        max_length=200, blank=True, null=True
     )
-    wieght = models.DecimalField(max_digits=9, decimal_places=6)
-    height = models.DecimalField(max_digits=9, decimal_places=6)
-
-    hearing_right = models.CharField(blank=True, max_length=20)
-    hearing_left = models.CharField(blank=True, max_length=20)
-
-    visual_acuity_with_correction_left = models.CharField(blank=True, max_length=20)
-    visual_acuity_with_correction_right = models.CharField(blank=True, max_length=20)
-    visual_acuity_without_correction_left = models.CharField(blank=True, max_length=20)
+    visual_acuity_with_correction_right = models.CharField(
+        max_length=200, blank=True, null=True
+    )
+    visual_acuity_without_correction_left = models.CharField(
+        max_length=200, blank=True, null=True
+    )
     visual_acuity_without_correction_right = models.CharField(
-        blank=True, max_length=20, default=" "
+        max_length=200, blank=True, null=True
     )
-
-    SKINPROBLEMS = [("skin infection", "skin infection")]
-    skin_state = MultiSelectField(choices=SKINPROBLEMS, blank=True)
-    skin_exam = models.TextField(blank=True)
-
-    OPHTALMOLOGYPROBLEMS = [
-        ("tearing", "tearing"),
-        ("pain", "pain"),
-        ("eye spots", "eye spots"),
-    ]
-    ophtalmological_state = MultiSelectField(choices=OPHTALMOLOGYPROBLEMS, blank=True)
-    ophtalmological_exam = models.TextField(blank=True)
-
-    ORLPROBLEMS = [
-        ("whistling", "whistling"),
-        ("repeated tonsillitis", "repeated tonsillitis"),
-        ("epistaxis", "epistaxis"),
-        ("rhinorrhea", "rhinorrhea"),
-    ]
-    orl_state = MultiSelectField(choices=ORLPROBLEMS, blank=True)
-    orl_exam = models.TextField(blank=True)
-
-    LOCOMOTORPROLEMS = [
-        ("muscular", "muscular"),
-        ("articular", "articular"),
-        ("vertebral", "vertebral"),
-        ("neurological", "neurological"),
-    ]
-    locomotor_case = MultiSelectField(choices=LOCOMOTORPROLEMS, blank=True)
-    locomotor_exam = models.TextField(blank=True)
-
-    RESPIRATORYPROBLEMS = [
-        ("cough", "cough"),
-        ("dyspnea", "dyspnea"),
-        ("expectoration", "expectoration"),
-        ("chest pain", "chest pain"),
-    ]
-    respiratory_state = MultiSelectField(choices=RESPIRATORYPROBLEMS, blank=True)
-    respiratory_exam = models.TextField(blank=True)
-
-    CARDIOVASCULARPROBLEMS = [
-        ("palpitations", "palpitations"),
-        ("edema pain", "edema pain"),
-        ("pain on walk", "pain on walk"),
-        ("pain on rest", "pain on rest"),
-        ("pain on effort", "pain on effort"),
-    ]
-    cardiovascular_state = MultiSelectField(choices=CARDIOVASCULARPROBLEMS, blank=True)
-    cardiovascular_exam = models.TextField(blank=True)
-
-    DIGESTIVEPROBLEMS = [
-        ("appetite problem", "appetite problem"),
-        ("transit", "transit"),
-        ("stool", "stool"),
-        ("rectal bleeding", "rectal bleeding"),
-        ("abdominal pain", "abdominal pain"),
-    ]
-    digestive_state = MultiSelectField(choices=DIGESTIVEPROBLEMS, blank=True)
-    digestive_exam = models.TextField(blank=True)
-
-    aptitude = models.BooleanField(
-        blank=True, default=False
-    )  # apt=True inapt=False the default is inapt
-    reason = models.TextField(blank=True)
-
-    # orientation
-    orientation_specialist = models.CharField(max_length=100, blank=True)
-
-    CAUSES = [
-        ("notice", "notice"),
-        ("hospitalization", "hospitalization"),
-        ("treatment", "treatment"),
-    ]
-
-    orientation_cause = models.CharField(
-        max_length=50, choices=CAUSES, default="notice", blank=True
-    )
-
-    orientation_response = models.TextField(blank=True)
+    skin_state = models.CharField(max_length=200, blank=True, null=True)
+    skin_exam = models.CharField(max_length=200, blank=True, null=True)
+    ophtalmological_state = models.CharField(max_length=200, blank=True, null=True)
+    ophtalmological_exam = models.CharField(max_length=200, blank=True, null=True)
+    respiratory_state = models.CharField(max_length=200, blank=True, null=True)
+    respiratory_exam = models.CharField(max_length=200, blank=True, null=True)
+    cardiovascular_state = models.CharField(max_length=200, blank=True, null=True)
+    cardiovascular_exam = models.CharField(max_length=200, blank=True, null=True)
+    digestive_state = models.CharField(max_length=200, blank=True, null=True)
+    digestive_exam = models.CharField(max_length=200, blank=True, null=True)
+    aptitude = models.CharField(max_length=200, blank=True, null=True)
+    reason = models.CharField(max_length=200, blank=True, null=True)
+    orl_state = models.CharField(max_length=200, blank=True, null=True)
+    orl_exam = models.CharField(max_length=200, blank=True, null=True)
+    locomotor_case = models.CharField(max_length=200, blank=True, null=True)
+    locomotor_exam = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
-        return f"MedicalRecord-for the patient:{self.biometric}-{self.patient.user.last_name} {self.patient.user.first_name}"
+        return f"MedicalRecord-for the patient:{self.id}-{self.patient}"
