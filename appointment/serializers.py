@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from authentication.models import Patient, User
 from .models import Appointment
+from .notification_push import push_notify
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -53,7 +54,20 @@ class AppointmentSerializer(serializers.ModelSerializer):
         request = self.context["request"]
         validated_data["logged_by"] = request.user
         validated_data["assigned_to"] = request.user
+        title = "New Appointment"
+        body = f"New appointment was assigned to you by Dr.{request.user.last_name} {request.user.first_name}"
+        patient_uid = validated_data.get("patient", None).user.uid
+        push_notify(patient_uid, title, body)
         return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        request = self.context["request"]
+        if validated_data.get("status", False) == "cancelled":
+            title = "Appointment Cancelled"
+            body = f"Your appointment request was cancelled by Dr.{request.user.last_name} {request.user.first_name}"
+            patient_uid = instance.patient.user.uid
+            push_notify(patient_uid, title, body)
+        return super().update(instance, validated_data)
 
 
 class PatientAppointmentSerializer(serializers.ModelSerializer):
@@ -61,6 +75,7 @@ class PatientAppointmentSerializer(serializers.ModelSerializer):
     Appoinment Serializer for patients
     """
 
+    doctor_data = UserSerializer(source="assigned_to", read_only=True)
     logged_by = serializers.PrimaryKeyRelatedField(read_only=True)
     approved = serializers.BooleanField(read_only=True)
 
@@ -80,5 +95,6 @@ class PatientAppointmentSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         request = self.context["request"]
         validated_data["logged_by"] = request.user
+        validated_data["assigned_to"] = User.objects.filter(role="Doctor").first()
         validated_data["patient"] = Patient.objects.get(user=request.user)
         return super().create(validated_data)

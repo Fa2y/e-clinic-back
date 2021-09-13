@@ -114,10 +114,27 @@ class PatientProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Patient
         exclude = ("user",)
+        read_only_fields = ["is_approved"]
 
 
 class UserProfileSerializer(UserDetailsSerializer):
     patient = PatientProfileSerializer()
 
     class Meta(UserSerializer.Meta):
-        pass
+        read_only_fields = [
+            "is_superuser",
+            "is_confirmed",
+            "is_active",
+            "role",
+            "email",
+        ]
+
+    @transaction.atomic
+    def update(self, instance, validated_data):
+        try:
+            patient_data = validated_data.get("patient", {})
+            PatientProfileSerializer().update(instance.patient, patient_data)
+            validated_data.pop("patient")
+        except Patient.DoesNotExist:
+            pass
+        return super().update(instance, validated_data)

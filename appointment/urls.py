@@ -7,4 +7,5 @@ router.register(r"appointments", DoctorAppointmentViewSet)
 router.register(r"patient-appointments", PatientAppointmentViewSet)
 urlpatterns = [
     path("api-appointment/", include(router.urls)),
+    path(r"api-appointment/beams-auth/", BeamsAuthView.as_view()),
 ]
