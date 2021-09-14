@@ -13,10 +13,56 @@ def validate_file_extension(value):
     from django.core.exceptions import ValidationError
 
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
-    valid_extensions = [".pdf", ".doc", ".docx",
-                        ".jpg", ".png", ".xlsx", ".xls"]
+    valid_extensions = [".pdf", ".doc", ".docx", ".jpg", ".png", ".xlsx", ".xls"]
     if not ext.lower() in valid_extensions:
         raise ValidationError("Unsupported file extension.")
+
+
+class ClinicalExam(SafeDeleteModel):
+    """
+    Clinical exam part of Medical exam
+    """
+
+    clinical_exam = models.TextField(blank=True, null=True)
+
+
+class ParaclinicalExam(SafeDeleteModel):
+    """
+    Paraclinical exam part of Medical exam
+    """
+
+    paraclinical_exam = models.FileField(
+        upload_to="docs/praclinicals/%Y/%m/%d",
+        blank=True,
+        validators=[validate_file_extension],
+    )
+
+
+class Evacuation(SafeDeleteModel):
+    """
+    Evacuation part of Medical exam
+    """
+
+    letter = models.TextField(blank=True, null=True)
+    hospital = models.CharField(max_length=100, blank=True, null=True)
+
+
+class Orientation(SafeDeleteModel):
+    """
+    Orientation part of Medical exam
+    """
+
+    orientation = models.TextField(blank=True, null=True)
+    doctor_name = models.CharField(max_length=100, blank=True, null=True)
+
+
+class MedicalCertificate(SafeDeleteModel):
+    """
+    Medical Certificate part of Medical exam
+    """
+
+    diagnosis = models.TextField(blank=True, null=True)
+    days = models.IntegerField(default=1, blank=True, null=True)
 
 
 class MedicalExam(SafeDeleteModel):
@@ -30,48 +76,43 @@ class MedicalExam(SafeDeleteModel):
 
     date = models.DateField(auto_now_add=True)
 
-    doctor_name = models.CharField(blank=True, max_length=100)
-
-    clinical_exam = models.TextField(blank=False, max_length=400)
-
-    paraclinical_exam = models.FileField(
-        upload_to="docs/praclinicals/%Y/%m/%d",
-        blank=True,
-        validators=[validate_file_extension],
+    clinical_exam = models.ForeignKey(
+        ClinicalExam, on_delete=models.CASCADE, blank=True, null=True
     )
-
-    medical_report = models.FileField(
-        upload_to="docs/med_reports/%Y/%m/%d",
-        blank=True,
-        validators=[validate_file_extension],
+    paraclinical_exam = models.ForeignKey(
+        ParaclinicalExam, on_delete=models.CASCADE, blank=True, null=True
     )
-
-    orientation = models.FileField(
-        upload_to="docs/orientations/%Y/%m/%d",
-        blank=True,
-        validators=[validate_file_extension],
+    evacuation = models.ForeignKey(
+        Evacuation, on_delete=models.CASCADE, blank=True, null=True
     )
-
-    evacuation = models.FileField(
-        upload_to="docs/evacuations/%Y/%m/%d",
-        blank=True,
-        validators=[validate_file_extension],
+    orientation = models.ForeignKey(
+        Orientation, on_delete=models.CASCADE, blank=True, null=True
     )
-
-    certificat = models.FileField(
-        upload_to="docs/certificats/%Y/%m/%d",
-        blank=True,
-        validators=[validate_file_extension],
-    )
-
-    ordanance = models.FileField(
-        upload_to="docs/ordanances/%Y/%m/%d",
-        blank=True,
-        validators=[validate_file_extension],
+    medical_certificate = models.ForeignKey(
+        MedicalCertificate, on_delete=models.CASCADE, blank=True, null=True
     )
 
     def __str__(self):
-        return f"MedicalExam-doctor:{self.doctor_name}-Patient{self.patient.user.last_name} {self.patient.user.first_name}- date:{self.date}"
+        return f"MedicalExam-Patient{self.patient.user.last_name} {self.patient.user.first_name}- date:{self.date}"
+
+
+class Prescription(SafeDeleteModel):
+    """
+    Prescription part of Ordanance
+    """
+
+    medical_exam = models.ForeignKey(
+        MedicalExam,
+        related_name="prescriptions",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+    )
+    medicament = models.CharField(max_length=100, blank=True, null=True)
+    duration = models.CharField(max_length=100, blank=True, null=True)
+    time = models.CharField(max_length=100, blank=True, null=True)
+    nbPerDat = models.IntegerField(default=1, blank=True, null=True)
+    nbUnit = models.IntegerField(default=1, blank=True, null=True)
 
 
 class MedicalRecord(SafeDeleteModel):
@@ -88,8 +129,7 @@ class MedicalRecord(SafeDeleteModel):
     injection = models.BooleanField(default=False, blank=True, null=True)
     oldSmoker = models.BooleanField(default=False, blank=True, null=True)
     alcohol = models.BooleanField(default=False, blank=True, null=True)
-    medication_consumption = models.BooleanField(
-        default=False, blank=True, null=True)
+    medication_consumption = models.BooleanField(default=False, blank=True, null=True)
 
     smokingNumberUnits = models.IntegerField(default=0, blank=True, null=True)
     chewingNumberUnits = models.IntegerField(default=0, blank=True, null=True)
@@ -119,16 +159,12 @@ class MedicalRecord(SafeDeleteModel):
     )
     skin_state = models.CharField(max_length=200, blank=True, null=True)
     skin_exam = models.CharField(max_length=200, blank=True, null=True)
-    ophtalmological_state = models.CharField(
-        max_length=200, blank=True, null=True)
-    ophtalmological_exam = models.CharField(
-        max_length=200, blank=True, null=True)
+    ophtalmological_state = models.CharField(max_length=200, blank=True, null=True)
+    ophtalmological_exam = models.CharField(max_length=200, blank=True, null=True)
     respiratory_state = models.CharField(max_length=200, blank=True, null=True)
     respiratory_exam = models.CharField(max_length=200, blank=True, null=True)
-    cardiovascular_state = models.CharField(
-        max_length=200, blank=True, null=True)
-    cardiovascular_exam = models.CharField(
-        max_length=200, blank=True, null=True)
+    cardiovascular_state = models.CharField(max_length=200, blank=True, null=True)
+    cardiovascular_exam = models.CharField(max_length=200, blank=True, null=True)
     digestive_state = models.CharField(max_length=200, blank=True, null=True)
     digestive_exam = models.CharField(max_length=200, blank=True, null=True)
     aptitude = models.BooleanField(default=False)

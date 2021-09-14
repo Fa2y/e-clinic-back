@@ -81,6 +81,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "5asfk3q0afptx06gftx1jqolvy2sfa1z",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-layHTdkqn7vRHyPQxgUggkbIy_rtgWOjuvs59qZ63OvTbWp79mNVVJRONIOsmaKAGtdlVh74RYz1ZwZyMUZdfLHJ6lPlgeZqOuOWUlm2u7Xdz1mt7212Z65i4jst8P6m_q4HXYf-RAM4DQ7BCEASdi8IOOg2xBIk2hMiYwFNGLERiMWdywSXRxZEr6v0BkB9EtA:1mPjx0:azk393zTAREBdIHqZ7PxDUBe5lZFWz7IQxpfCJZSxVQ",
+    "expire_date": "2021-09-27T11:16:38.205Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "5vqqojli4l5ge95inshxm2jr668d1vy3",
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIFrg:I3oL_pRLSIzEVWBTV_LnMQ4Kk0JYfhgrnigXOdAK2a4",
@@ -161,6 +169,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "aor638uf9jah0rudzl77cjr17dtrw7l3",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-la0v6pK07_REy0-kEIimJlJXx3wXDQpf3cc5LDLC1cdjW8hwmEleRvErFUJYeGaRDYhkBg6RIDshRUejF5RdDyI9SDxbm-ag7yHnZauu-n3Neu9ueSm1ThjYt9X5Sf6oR1nH3qOidwqxTjyqxt9YAFR0xAHidk8nJ9q4wQ-oNQtQusLKaMaiSDDCK9wfjrkbR:1mPlQj:0zPaAnEYKBZToGPUyOleCNffoo_SuPJccSbL5opEtEc",
+    "expire_date": "2021-09-27T12:51:25.848Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "bhnkmru8mgjfrk8qq7krac71jcm7ysbd",
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIV7f:moLuPAZ68hQkPXLcljeC-pITV2fmCwY6Qs2eZcpKxBs",
@@ -189,6 +205,14 @@
   "fields": {
     "session_data": ".eJxVjk0OgjAQhe_StZA2zJTWnV6EzHSmgUhqImVlvLtAWOjy_Xwv720GWus4rIu-hknM1eToBUGg6QW0ARTXsFdpHBP7LUugai6_GFN6aNlZmufdbiml51pqe3TOeGlvm9JSp0R1epb7Sf1NjbSMxweLvSUbuxxszIDImdB6Z1lj5i5GJki2DwKgIeQORAJGTNkpBlTz-QKj0UZG:1mIXdS:3jQuFZPNpMW66ZWel-JorWIKfXvYIYG1Rsq8oK4lj4o",
     "expire_date": "2021-09-07T14:42:42.939Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cdy9j1kdsvhtnda6cstsnhwkk4oc0cat",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-la0v6pK07_REy0-kEIimJlJXx3wXDQpf3cc5LDLC1cdjW8hwmEleRvErFUJYeGaRDYhkBg6RIDshRUejF5RdDyI9SDxbm-ag7yHnZauu-n3Neu9ueSm1ThjYt9X5Sf6oR1nH3qOidwqxTjyqxt9YAFR0xAHidk8nJ9q4wQ-oNQtQusLKaMaiSDDCK9wfjrkbR:1mPjot:GZbMFjGWnHOeXc4LrbXyOiDRE9aoPoMI8Oz7l7s5SBw",
+    "expire_date": "2021-09-27T11:08:15.158Z"
   }
 },
 {
@@ -337,6 +361,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "ke85jkw3ydn6z76zxplklbgxs4v5pda1",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-layHTdkqn7vRHyPQxgUggkbIy_rtgWOjuvs59qZ63OvTbWp79mNVVJRONIOsmaKAGtdlVh74RYz1ZwZyMUZdfLHJ6lPlgeZqOuOWUlm2u7Xdz1mt7212Z65i4jst8P6m_q4HXYf-RAM4DQ7BCEASdi8IOOg2xBIk2hMiYwFNGLERiMWdywSXRxZEr6v0BkB9EtA:1mPrcx:kw4RenRPInBKhTcDUe1I2UCZ3SZOoCyAZ6yqMX3Z4kw",
+    "expire_date": "2021-09-27T19:28:27.349Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "lkgyltn8x554eygwclqia1ag0ax1aqg6",
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIUoL:66I3IDOOxWBiF4rlZX6BFlfeksS6dU-5LmLehR7utyw",
@@ -389,6 +421,14 @@
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIFsv:OnEGY4_w6bsed7GpEY5ZUW8TsmF9lmbi9SlYCCQmXc0",
     "expire_date": "2021-09-06T19:45:29.288Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "q8kspkixyto0xnwa116g3a0pzoovhjh0",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-la0v6pK07_REy0-kEIimJlJXx3wXDQpf3cc5LDLC1cdjW8hwmEleRvErFUJYeGaRDYhkBg6RIDshRUejF5RdDyI9SDxbm-ag7yHnZauu-n3Neu9ueSm1ThjYt9X5Sf6oR1nH3qOidwqxTjyqxt9YAFR0xAHidk8nJ9q4wQ-oNQtQusLKaMaiSDDCK9wfjrkbR:1mPms8:JtFQX8_0t7qGFjSdETW4QYM0NoTi1GXG05OMVwM9fnM",
+    "expire_date": "2021-09-27T14:23:48.376Z"
   }
 },
 {
@@ -533,6 +573,14 @@
   "fields": {
     "session_data": ".eJxVjEkOgjAYRu_StSWVzu70IuSfGoikJlJWxruLhIUuv-G9lxpgbeOwLvIcJlYXBSFZyIl1Ii7aeQsaSEiziRETR4xY1OkXQ6C71J2d52_dAdFjra3bP8e8dNctSW0TQZse9XZQf6oRlnHzJEvEyLGUgqEH9DkXnzlkQhIxJYaI3rq-h75wAHDkzjaYjJ7IsIh6fwAVQ0gN:1mIUzG:X_BuY3Ax_ylCG0X7HXvGcqHnTvrGA79U7KMexErsw_I",
     "expire_date": "2021-09-07T11:53:02.786Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zxt6qwrznmfjmhncj8qy87uj2bu2iamp",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-layHTdkqn7vRHyPQxgUggkbIy_rtgWOjuvs59qZ63OvTbWp79mNVVJRONIOsmaKAGtdlVh74RYz1ZwZyMUZdfLHJ6lPlgeZqOuOWUlm2u7Xdz1mt7212Z65i4jst8P6m_q4HXYf-RAM4DQ7BCEASdi8IOOg2xBIk2hMiYwFNGLERiMWdywSXRxZEr6v0BkB9EtA:1mPnN3:EbyGU6J2i5MTI8CND0eYWSh2Og3quI7KMdxRyzaVDZ0",
+    "expire_date": "2021-09-27T14:55:45.375Z"
   }
 },
 {
@@ -788,8 +836,8 @@
 {
   "model": "authentication.user",
   "fields": {
-    "password": "pbkdf2_sha256$260000$5zF5ZNJczXcKu3XtLkUwAf$EydKlE56KMFKzvSlrf+f0SEmb083zgdEm6dtZxBCTyY=",
-    "last_login": "2021-08-24T12:23:18Z",
+    "password": "pbkdf2_sha256$260000$Bn7g9zc40aUqsBTUyta4qw$ofXxbo3KHsfyGOlxVnb8bqIl76cnNDKjQggERQbTGPo=",
+    "last_login": "2021-09-13T14:23:48.369Z",
     "is_superuser": false,
     "first_name": "Ahmed Yasser",
     "last_name": "Merzouk Benselloua",
@@ -805,7 +853,7 @@
     "phone": "+21355667477",
     "date_of_birth": "2000-01-01",
     "city": "27",
-    "address": "Mostaganem Centre",
+    "address": "Mostaganem Centre, Rue khemesti",
     "is_confirmed": false,
     "created_on": "2021-07-01T18:41:41.147Z",
     "groups": [],
@@ -870,9 +918,9 @@
   "model": "authentication.user",
   "fields": {
     "password": "pbkdf2_sha256$260000$4arkKrNtj5SAjE0CUku8j5$H46f6itnDRZbY1LBEWqsCD4MUm5ettBBo797xJnQsDc=",
-    "last_login": "2021-09-11T10:16:24.312Z",
+    "last_login": "2021-09-13T19:28:27.336Z",
     "is_superuser": true,
-    "first_name": "Dr Ahmed",
+    "first_name": "Ahmed",
     "last_name": "Yasser",
     "is_staff": false,
     "is_active": true,
@@ -968,7 +1016,7 @@
       "a.merzoukbenselloua@esi-sba.dz"
     ],
     "type": "Student",
-    "education_level": "1CS",
+    "education_level": "3CS-ISI",
     "is_approved": true
   }
 },
@@ -1012,20 +1060,102 @@
   }
 },
 {
+  "model": "medical.clinicalexam",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "clinical_exam": "clinical detailss...."
+  }
+},
+{
+  "model": "medical.paraclinicalexam",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "paraclinical_exam": "docs/praclinicals/2021/09/14/INV-2021-08.pdf"
+  }
+},
+{
+  "model": "medical.paraclinicalexam",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "paraclinical_exam": ""
+  }
+},
+{
+  "model": "medical.paraclinicalexam",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "paraclinical_exam": "docs/praclinicals/2021/09/14/ctf.jpg"
+  }
+},
+{
+  "model": "medical.evacuation",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "letter": "Letter of evacuation",
+    "hospital": "Hospital Example"
+  }
+},
+{
+  "model": "medical.orientation",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "orientation": "orientation Example",
+    "doctor_name": "Dr Houssem"
+  }
+},
+{
+  "model": "medical.medicalcertificate",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "diagnosis": "Patient Diagnosis",
+    "days": 3
+  }
+},
+{
   "model": "medical.medicalexam",
   "pk": 1,
   "fields": {
     "deleted": null,
-    "patient": "ea50ac55-ef4e-43d3-b753-36a86db7b17d",
-    "date": "2021-08-17",
-    "doctor_name": "Dr.  ",
-    "clinical_exam": "Clinical Exam description for this specific patient",
-    "paraclinical_exam": "",
-    "medical_report": "",
-    "orientation": "",
-    "evacuation": "",
-    "certificat": "",
-    "ordanance": ""
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "date": "2021-09-14",
+    "clinical_exam": 1,
+    "paraclinical_exam": 4,
+    "evacuation": 1,
+    "orientation": 1,
+    "medical_certificate": 1
+  }
+},
+{
+  "model": "medical.prescription",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "medical_exam": 1,
+    "medicament": "Pracetamol",
+    "duration": "Lunch",
+    "time": "before",
+    "nbPerDat": 3,
+    "nbUnit": 5
+  }
+},
+{
+  "model": "medical.prescription",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "medical_exam": 1,
+    "medicament": "Sulpirid",
+    "duration": "Sleep",
+    "time": "before",
+    "nbPerDat": 3,
+    "nbUnit": 5
   }
 },
 {
@@ -1067,7 +1197,7 @@
     "cardiovascular_exam": "",
     "digestive_state": "",
     "digestive_exam": "",
-    "aptitude": "",
+    "aptitude": null,
     "reason": "",
     "orl_state": "",
     "orl_exam": "",
@@ -1114,7 +1244,7 @@
     "cardiovascular_exam": "",
     "digestive_state": "",
     "digestive_exam": "",
-    "aptitude": "",
+    "aptitude": null,
     "reason": "",
     "orl_state": "",
     "orl_exam": "",
@@ -1245,6 +1375,111 @@
     "logged_at": "2021-09-11T18:19:42.128Z",
     "updated_at": "2021-09-11T18:19:42.128Z",
     "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 7,
+  "fields": {
+    "deleted": null,
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Covid Vaccine and checkup",
+    "date": "2021-09-20T14:30:00Z",
+    "comment": "I can't be there that day",
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-13T11:17:16.866Z",
+    "updated_at": "2021-09-13T14:57:34.194Z",
+    "status": "cancelled",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 8,
+  "fields": {
+    "deleted": null,
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "logged_by": [
+      "a.merzoukbenselloua@esi-sba.dz"
+    ],
+    "description": "I have a stomach ache",
+    "date": "2021-09-19T11:30:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-13T11:51:31.890Z",
+    "updated_at": "2021-09-13T14:58:40.228Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 9,
+  "fields": {
+    "deleted": null,
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "logged_by": [
+      "a.merzoukbenselloua@esi-sba.dz"
+    ],
+    "description": "I couldn't make it for a TD because I had a headache and fever",
+    "date": "2021-09-22T14:30:00Z",
+    "comment": "I don't work for that day, request another appointment for tomorrow",
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-13T12:16:42.782Z",
+    "updated_at": "2021-09-13T12:17:51.525Z",
+    "status": "cancelled",
+    "approved": false
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 10,
+  "fields": {
+    "deleted": null,
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Come to me next week",
+    "date": "2021-09-26T11:30:00Z",
+    "comment": null,
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-13T14:59:16.894Z",
+    "updated_at": "2021-09-13T15:06:34.214Z",
+    "status": "new",
+    "approved": true
+  }
+},
+{
+  "model": "appointment.appointment",
+  "pk": 11,
+  "fields": {
+    "deleted": null,
+    "patient": "a25d81ef-4513-41bb-bf05-fe90e54d3d39",
+    "logged_by": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "description": "Come to me next week",
+    "date": "2021-09-26T11:30:00Z",
+    "comment": "This was an error",
+    "assigned_to": [
+      "ahmed.mer2000@esi-sba.dz"
+    ],
+    "logged_at": "2021-09-13T14:59:16.920Z",
+    "updated_at": "2021-09-13T15:00:06.318Z",
+    "status": "cancelled",
     "approved": true
   }
 },
@@ -2074,6 +2309,132 @@
     "object_repr": "for Patient-Student-Djebbar Aymen by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Dr Ahmed - Yasser",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2021-09-13T11:21:32.502Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "authentication",
+      "user"
+    ],
+    "object_id": "c2b2f4a1-9108-4121-9647-f23783f4dc22",
+    "object_repr": "c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2021-09-13T12:17:51.528Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "9",
+    "object_repr": "for Patient-Student-Merzouk Benselloua Ahmed Yasser by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Comment\", \"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2021-09-13T15:00:37.977Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "10",
+    "object_repr": "for Patient-Student-Merzouk Benselloua Ahmed Yasser by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2021-09-13T15:06:15.694Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "appointment",
+      "appointment"
+    ],
+    "object_id": "10",
+    "object_repr": "for Patient-Student-Merzouk Benselloua Ahmed Yasser by Dr c2b2f4a1-9108-4121-9647-f23783f4dc22 - ahmed.mer2000@esi-sba.dz - Ahmed - Yasser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2021-09-14T09:47:46.254Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "prescription"
+    ],
+    "object_id": "1",
+    "object_repr": "Prescription object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2021-09-14T09:47:53.028Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "paraclinicalexam"
+    ],
+    "object_id": "1",
+    "object_repr": "ParaclinicalExam object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2021-09-14T10:26:41.849Z",
+    "user": [
+      "e-clinic@esi-sba.dz"
+    ],
+    "content_type": [
+      "medical",
+      "medicalexam"
+    ],
+    "object_id": "1",
+    "object_repr": "MedicalExam-PatientMerzouk Benselloua Ahmed Yasser- date:2021-09-14",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Paraclinical exam\"]}}]"
   }
 }
 ]

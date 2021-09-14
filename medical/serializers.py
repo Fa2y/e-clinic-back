@@ -27,26 +27,6 @@ class PatientFiltredSerializer(serializers.ModelSerializer):
         fields = ["pid", "user", "type", "education_level"]
 
 
-class MedicalExamSerializer(serializers.ModelSerializer):
-    """
-    Medical Exam serializer
-    """
-
-    patient_data = PatientFiltredSerializer(source="patient", read_only=True)
-    patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
-
-    def create(self, validated_data):
-        request = self.context["request"]
-        validated_data[
-            "doctor_name"
-        ] = f"Dr. {request.user.last_name} {request.user.first_name}"
-        return super().create(validated_data)
-
-    class Meta:
-        model = MedicalExam
-        fields = "__all__"
-
-
 class MedicalRecordSerializer(serializers.ModelSerializer):
     """
     Medical Record serializer
@@ -54,8 +34,62 @@ class MedicalRecordSerializer(serializers.ModelSerializer):
 
     patient_data = PatientFiltredSerializer(source="patient", read_only=True)
     patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
-    screening = MedicalExamSerializer(many=True, read_only=True, required=False)
 
     class Meta:
         model = MedicalRecord
+        fields = "__all__"
+
+
+class EvacuationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Evacuation
+        fields = "__all__"
+
+
+class OrientationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Orientation
+        fields = "__all__"
+
+
+class MedicalCertificateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MedicalCertificate
+        fields = "__all__"
+
+
+class PrescriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Prescription
+        fields = "__all__"
+
+
+class MedicalExamSerializer(serializers.ModelSerializer):
+    """
+    Medical Exam serializer
+    """
+
+    patient_data = PatientFiltredSerializer(source="patient", read_only=True)
+    patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
+    clinical_exam = serializers.CharField(
+        source="clinical_exam.clinical_exam", read_only=True
+    )
+    paraclinical_exam = serializers.FileField(
+        source="paraclinical_exam.paraclinical_exam", use_url=True, read_only=True
+    )
+    evacuation = EvacuationSerializer(read_only=True)
+    orientation = OrientationSerializer(read_only=True)
+    medical_certificate = MedicalCertificateSerializer(read_only=True)
+    ordanance = PrescriptionSerializer(
+        source="prescriptions", many=True, read_only=True
+    )
+
+    class Meta:
+        model = MedicalExam
+        fields = "__all__"
+
+
+class PraclinicalExamSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ParaclinicalExam
         fields = "__all__"

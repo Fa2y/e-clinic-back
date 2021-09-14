@@ -128,13 +128,3 @@ class UserProfileSerializer(UserDetailsSerializer):
             "role",
             "email",
         ]
-
-    @transaction.atomic
-    def update(self, instance, validated_data):
-        try:
-            patient_data = validated_data.get("patient", {})
-            PatientProfileSerializer().update(instance.patient, patient_data)
-            validated_data.pop("patient")
-        except Patient.DoesNotExist:
-            pass
-        return super().update(instance, validated_data)
