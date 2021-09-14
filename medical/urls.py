@@ -5,6 +5,7 @@ from .views import *
 router = routers.DefaultRouter()
 router.register(r"medical_exam", MedicalExamViewSet)
 router.register(r"medical_record", MedicalRecordViewSet)
+router.register(r"patient_no_medical_record", PatientNoMedicalRecordViewSet)
 # router.register(
 #     r"patient_medical_record",
 #     PatientMedicalRecordAPIView,,

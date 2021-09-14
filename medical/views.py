@@ -8,6 +8,7 @@ from rest_framework.exceptions import ParseError, NotFound
 import json
 from django.http import Http404
 from .serializers import *
+from authentication.serializers import PatientSerializer
 from .models import *
 
 
@@ -25,6 +26,32 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
         "patient__user__last_name",
         "patient__type",
         "patient__education_level",
+    ]
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context.update({"request": self.request})
+        return context
+
+
+class PatientNoMedicalRecordViewSet(
+    mixins.ListModelMixin,
+    viewsets.GenericViewSet,
+):
+    """
+    Patients with no medical record
+    """
+
+    queryset = Patient.objects.exclude(medicalrecord__in=MedicalRecord.objects.all())
+
+    serializer_class = PatientSerializer
+    filter_backends = (filters.SearchFilter,)
+    permission_classes = [IsAuthenticated, DoctorPermission]
+    search_fields = [
+        "user__first_name",
+        "user__last_name",
+        "type",
+        "education_level",
     ]
 
     def get_serializer_context(self):
