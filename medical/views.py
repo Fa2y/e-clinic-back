@@ -84,7 +84,7 @@ class MedicalExamViewSet(
                 body = json.loads(request.body)
             except Exception:
                 body = request.data
-            print(request.data)
+            # print(body.get("part", False))
             medExam = MedicalExam.objects.get(pk=pk)
             if body.get("part", False) == "clinical_exam":
                 data = body.get("data", {})
@@ -93,7 +93,7 @@ class MedicalExamViewSet(
                 )
                 medExam.clinical_exam = ce
                 medExam.save()
-            elif body.get("part", False) == "praclinical_exam":
+            elif body.get("part", False) == "paraclinical_exam":
                 serializer = PraclinicalExamSerializer(data=request.FILES)
                 serializer.is_valid(raise_exception=True)
                 medExam.paraclinical_exam = serializer.save()
