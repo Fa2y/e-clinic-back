@@ -101,7 +101,6 @@ class PatientSerializer(serializers.ModelSerializer):
         return attrs
 
     def save(self, request=None):
-        print(request)
         return super().save()
 
 

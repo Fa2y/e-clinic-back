@@ -134,7 +134,6 @@ class MedicalExamViewSet(
                 body = json.loads(request.body)
             except Exception:
                 body = request.data
-            # print(body.get("part", False))
             medExam = MedicalExam.objects.get(pk=pk)
             if body.get("part", False) == "clinical_exam":
                 data = body.get("data", {})
