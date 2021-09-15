@@ -70,6 +70,7 @@ class MedicalExamSerializer(serializers.ModelSerializer):
     """
 
     patient_data = PatientFiltredSerializer(source="patient", read_only=True)
+    doctor_data = UserFiltredSerializer(source="doctor", read_only=True)
     patient = serializers.PrimaryKeyRelatedField(queryset=Patient.objects.all())
     clinical_exam = serializers.CharField(
         source="clinical_exam.clinical_exam", read_only=True
@@ -87,6 +88,11 @@ class MedicalExamSerializer(serializers.ModelSerializer):
     class Meta:
         model = MedicalExam
         fields = "__all__"
+
+    def create(self, validated_data):
+        request = self.context["request"]
+        validated_data["doctor"] = request.user
+        return super().create(validated_data)
 
 
 class PraclinicalExamSerializer(serializers.ModelSerializer):

@@ -83,6 +83,12 @@ class MedicalExam(SafeDeleteModel):
 
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 
+    doctor = models.ForeignKey(
+        User,
+        null=True,
+        on_delete=models.CASCADE,
+    )
+
     date = models.DateField(auto_now_add=True)
 
     clinical_exam = models.ForeignKey(
@@ -176,7 +182,7 @@ class MedicalRecord(SafeDeleteModel):
     cardiovascular_exam = models.CharField(max_length=200, blank=True, null=True)
     digestive_state = models.CharField(max_length=200, blank=True, null=True)
     digestive_exam = models.CharField(max_length=200, blank=True, null=True)
-    aptitude = models.BooleanField(default=False)
+    aptitude = models.BooleanField(default=False, null=True)
     reason = models.CharField(max_length=200, blank=True, null=True)
     orl_state = models.CharField(max_length=200, blank=True, null=True)
     orl_exam = models.CharField(max_length=200, blank=True, null=True)

@@ -18,4 +18,12 @@ urlpatterns = [
         r"api-medical/patient_medical_record/",
         PatientMedicalRecordAPIView.as_view(),
     ),
+    path(
+        r"api-medical/patient_medical_exam/",
+        PatientMedicalExamAPIView.as_view(),
+    ),
+    path(
+        r"api-medical/statistics/",
+        StatisticsAPIView.as_view(),
+    ),
 ]

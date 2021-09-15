@@ -83,6 +83,29 @@ class PatientMedicalRecordAPIView(APIView):
         return Response(serializer.data)
 
 
+class PatientMedicalExamAPIView(APIView):
+    """
+    Retrieve The medical exam for the Patient requesting it
+    """
+
+    permission_classes = [IsAuthenticated, PatientPermission]
+
+    def get_objects(self, patient):
+        try:
+            return MedicalExam.objects.filter(patient=patient)
+        except MedicalExam.DoesNotExist:
+            raise Http404
+
+    def get(self, request):
+        """
+        GET : retrieve medical exam for patient
+        """
+        patient = Patient.objects.get(user=request.user)
+        medical_exam = self.get_objects(patient)
+        serializer = MedicalExamSerializer(medical_exam, many=True)
+        return Response(serializer.data)
+
+
 class MedicalExamViewSet(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
@@ -169,3 +192,55 @@ class MedicalExamViewSet(
             raise NotFound()
         # except Exception:
         #     raise ParseError()
+
+
+class StatisticsAPIView(APIView):
+    """
+    Retrieve Multiple diffrent statistics
+    """
+
+    permission_classes = [IsAuthenticated, DoctorPermission]
+
+    def get_smokers(self, medrecs):
+        """
+        Get Smokers stats
+        """
+        from itertools import groupby
+
+        data = {
+            key: len(list(group))
+            for key, group in groupby(
+                medrecs.filter(smoking=True), lambda medr: medr.patient.education_level
+            )
+        }
+        return data
+
+    def get_alcohol(self, medrecs):
+        """
+        Get Alcoholics stats
+        """
+        from itertools import groupby
+
+        dataLevel = {
+            key: len(list(group))
+            for key, group in groupby(
+                medrecs.filter(alcohol=True), lambda medr: medr.patient.education_level
+            )
+        }
+        dataSex = {
+            key: len(list(group))
+            for key, group in groupby(
+                medrecs.filter(alcohol=True), lambda medr: medr.patient.user.sex
+            )
+        }
+        return {"level": dataLevel, "sex": dataSex}
+
+    def get(self, request):
+        """
+        GET : Statistics
+        """
+        medrecs = MedicalRecord.objects.all()
+        smokers = self.get_smokers(medrecs)
+        alcoholics = self.get_alcohol(medrecs)
+        data = {"smokers": smokers, "alcoholics": alcoholics, "all": medrecs.count()}
+        return Response(data)
