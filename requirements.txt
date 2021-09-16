@@ -7,3 +7,4 @@ django_allauth==0.44.0
 djangorestframework==3.12.4
 pusher_push_notifications
 django-cors-headers
+gunicorn
