@@ -1,6 +1,6 @@
 FROM python:alpine
 
-ENV APP_DIR_NAME backend
+ENV APP_DIR_NAME .
 ENV APP_PATH /opt/$APP_DIR_NAME
 
 RUN apk update \
