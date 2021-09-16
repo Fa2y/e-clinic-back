@@ -1,7 +1,7 @@
 FROM python:alpine
 
 ENV APP_DIR_NAME .
-ENV APP_PATH /opt/$APP_DIR_NAME
+ENV APP_PATH /opt/e-clinic-back
 
 RUN apk update \
   && apk add --virtual build-deps gcc python3-dev musl-dev postgresql-dev postgresql mysql-client mariadb-connector-c-dev

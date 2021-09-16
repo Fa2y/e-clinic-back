@@ -43,4 +43,4 @@ echo "The Database has been updated"
 
 # run the server
 echo "Starting the server..."
-gunicorn api.wsgi --bind 0.0.0.0:8000
+gunicorn api.wsgi.dev --bind 0.0.0.0:8000
